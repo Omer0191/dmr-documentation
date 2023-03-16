@@ -51,7 +51,7 @@ For more details, follow the readme file in the package.
 <p>You can download and install the package by follwing steps:
 	</p>
 <pre class="bash"><code class="hljs"><span class="hljs-comment"> tar -zxf dmr_analysis.tgz</span>
-<span class="hljs-comment"> cd bpb3</span>
+<span class="hljs-comment"> cd dmr_analysis</span>
 <span class="hljs-comment"> python setup.py install</span></code></pre>
 	</div>	
 	
@@ -76,7 +76,7 @@ For more details, follow the readme file in the package.
 	
 ## Pipeline Tasks:
 	
-<p>The pipeline consists of follwoing tasks. To run a task, type dmr_analysis task args. To see what are the options for each task of the pipeline, please run: bpb3 -h </p>
+<p>The pipeline consists of follwoing tasks. To run a task, type dmr_analysis task args. To see what are the options for each task of the pipeline, please run: dmr_analysis -h </p>
 
 <ul>
 <li><code>dmr_analysis_block </code> : Predict Differentially Methylated Region (DMR) from genome-wide methylation regions such as by using WGBS or other similar techniques.</li>
@@ -92,41 +92,7 @@ For more details, follow the readme file in the package.
 	
 </ul>
 	
-	
-## Secondary Funtions:
-<div class="container-fluid abstract_des">
 
-<p>Test run for use of secondary functions are available in final_demo folder.
-In folder bpb3/final_demo , there demos of following modules: </p>
-
-<ul>
-	<li><code>plot_result</code> : Generate heatmaps for selected mutation blocks. (demo)</li>
-	<li><code>filter_results_by_gene_expression_cluster4pwm</code> : Filter those TF whose expression is too low in clustered PWMs. (demo)</li>
-	<li><code>filter_results_by_gene_expression</code> : Filter those TFs whose expression is too low (e.g., RPKM<0.03). (demo)</li>
-	<li><code>make_plots_cluster4pwm</code> : Make heatmap plots for all significant mutation blocks that affecting clustered PWMs. (demo)</li>
-	<li><code>make_plots</code>: Make heatmap plots for all significant mutation blocks that affecting PWMs. (demo)</li>
-	<li><code>check_accuracy4cluster</code>: Check accuracy for 67 SNPs that based on clustered PWMs. (demo)</li>
-	<li><code>check_accuracy</code> : Check accuracy for 67 SNPs that based on original PWMs. (demo)</li>
-	<li><code>filterDEG4bpb3</code> : Filter bpb3 exported differential expression gene list by rratios. (demo)</li>
-	<li><code>preprocess_icgc_data</code> : Preprocess of ICGC data such as a folder contains files donor_*, specimen, simple_somatic*, exp_seq.tsv et al. (demo)</li>
-	
-</ul>
-</div>
-
-## Details of Secondary Funtions:
-
-For more details of individual function and parameters, please go to repsective page.  
- [plot_result](plot_result.md)  
- [filter_results_by_gene_expression_cluster4pwm](filter_results_by_gene_expression_cluster4pwm.md)  
- [filter_results_by_gene_expression](filter_results_by_gene_expression.md)  
- [make_plots_cluster4pwm](make_plots_cluster4pwm.md)  
- [make_plots](make_plots.md)  
- [check_accuracy4cluster](check_accuracy4cluster.md)  
- [check_accuracy](check_accuracy.md)  
- [filterDEG4bpb3](filterDEG4bpb3.md)  
- [preprocess_icgc_data](preprocess_icgc_data.md)  
- 
-          		 
          	
            			
          	
