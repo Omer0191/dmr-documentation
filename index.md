@@ -5,19 +5,19 @@
 
 
 
-# BayesPI-BAR in Python3 
-## bpb3 Documentation
+# Differential Methylated Region Analysis Tool 
+## dmr_analysis Documentation
 
-bpb3 is a software tool for Bayesian method for protein-DNA interaction with binding affinity Ranking in Python3.
+dmr_analysis is a software tool for differentially Methylated Regions analysis to rank significant DMRs.
 
 
 
 
 ## Modules:
-[Home](index.md) | [Differential Expression](differential_expression.md) | [Gene Regions](gene_regions.md) | [Mussd](mussd.md) | [Highly Mutated Blocks](highly_mutated_blocks.md) | [BayesPiBar](bayespi_bar.md) | [Choose Background Parameters](choose_background_parameters.md) | [Background Affinity Changes](background_affinity_changes.md) | [Affinity Change Significance](affinity_change_significance_test.md) | [Parallel](parallel.md) | [make_cluster4pwm](make_cluster4pwm.md) | [bpb3 SelectedPWM](bpb3selectedPWM.md) | [Run Pipeline](run_pipeline.md) | [clean_tmp](clean_tmp.md)  
+[Home](index.md) | [DMR Block Analysis](dmr_analysis_block.md) | [Combine MultiChr4Rank](dmr_combine_multChrs4rank.md) | [Selected4plot](dmr_selected4plot.md) | [map2genome](dmr_map2genome.md) | [map2chromSegment](dmr_map2chromSegment.md) | [cal2genome_percent](dmr_cal2genome_percent.md) | [cal2chromSegment_percent](dmr_cal2chromSegment_percent.md) | [percent2plot](dmr_percent2plot.md) | [combine2geneAnnot](dmr_combine2geneAnnot.md) | [exportData](dmr_exportData.md)   
 ## How to start:
 <div class="container-fluid abstract_des">
-bpb3 is written in python. It can be installed and accessed from command line and is avalible for both linux and mac operating systems. The package can be downloaded <strong> here </strong> .
+dmr_analysis is written in python. It can be installed and accessed from command line and is avalible for both linux and mac operating systems. The package can be downloaded <strong> here </strong> .
 
 Prior to installing the package, dependencies must be fulfilled. List of dependencies is as follows:
 <ul>
@@ -36,12 +36,11 @@ Prior to installing the package, dependencies must be fulfilled. List of depende
 	<li>scipy</li>
 	<li>tempfile</li>
 	<li>time</li>
-	<li>numba</li>
 
 </ul>
 It is advised to install dependencies using miniconda.
 Package contains a file requirments.txt which can be used for automatic installation of dependencies from conda or pip.
-To install the package, go to the bpb3_git directory and type: python setup.py install
+To install the package, go to the dmr_analysis directory and type: python setup.py install
 For more details, follow the readme file in the package.
 </div>
 	
@@ -51,7 +50,7 @@ For more details, follow the readme file in the package.
 		
 <p>You can download and install the package by follwing steps:
 	</p>
-<pre class="bash"><code class="hljs"><span class="hljs-comment"> tar -zxf bpb3_git.tgz</span>
+<pre class="bash"><code class="hljs"><span class="hljs-comment"> tar -zxf dmr_analysis.tgz</span>
 <span class="hljs-comment"> cd bpb3</span>
 <span class="hljs-comment"> python setup.py install</span></code></pre>
 	</div>	
@@ -62,8 +61,8 @@ For more details, follow the readme file in the package.
 <p>The package folder will contain following:
 	</p>
 <ul>
-	<li><code>final_demo</code> : Contains seondary functions scripts.</li>
-	<li><code>bpb3</code> : Contains python soruce code of pipeline.</li>
+	<li><code>final_demo</code> : Contains functions scripts.</li>
+	<li><code>dmr_analysis</code> : Contains python soruce code of pipeline.</li>
 	<li><code>readme.txt</code> : Instructions about usage of package.</li>
 	<li><code>requirments.txt</code> :  List of requirements. Can be used for automatic installation from miniconda or pip.</li>
 	<li><code>setup.py</code>: Setup file for package.</li>
@@ -77,42 +76,22 @@ For more details, follow the readme file in the package.
 	
 ## Pipeline Tasks:
 	
-<p>The pipeline consists of follwoing tasks. To run a task, type bpb3 task args. To see what are the options for each task of the pipeline, please run: bpb3 -h </p>
+<p>The pipeline consists of follwoing tasks. To run a task, type dmr_analysis task args. To see what are the options for each task of the pipeline, please run: bpb3 -h </p>
 
 <ul>
-<li><code>differential_expression </code> : Predict differentialy expressed genes (DEG) based on two group of samples.</li>
-	<li><code>gene_regions </code> : Extracts regions near transcription start sites of selected genes based on genCode gtf. </li>
-	<li><code>mussd</code> : Mutation filtering based on the Space and Sample Distribution - MuSSD.</li>
-	<li><code>highly_mutated_blocks</code> : Find blocks with significantly more mutations than would be expected.</li>
-	<li><code>bayespi_bar</code> : BayesPI-BAR delta-dbA ranking computation for TF binding affinity affected by DNA mutation.</li>
-	<li><code>choose_background_parameters</code> : Selects parameters for mutation background computation.</li>
-	<li><code>background_affinity_changes</code> : Mutation background computation.</li>
-	<li><code>affinity_change_significance_test</code> : Significant test of TF binding affinity changes between foreground and background affinity changes.</li>
-	<li><code>parallel</code> : Run commands from the given file in parallel.</li>
-	<li><code>make_cluster4pwm</code>:  Make input PWM files for bpb3 based on clustered PWMs.</li>
-	<li><code>bpb3selectedPWM</code> : The second level analysis of bpb3 by using the top PWMs in TF ranking after the first level analysis of bpb3 based on the clustered PWMs.</li>
-	<li><code>run_pipeline</code> : Run full bpb3 pipeline (e.g., the first level analysis of bpb3 if clustered PWMs are used in the calculation).</li>
-	<li><code>clean_tmp</code>: Clean temporary files from output folders.</li>
-
+<li><code>dmr_analysis_block </code> : Predict Differentially Methylated Region (DMR) from genome-wide methylation regions such as by using WGBS or other similar techniques.</li>
+	<li><code>dmr_combine_multChrs4rank </code> : Combine predicted DMRs/MRs from multiple chromosomes then rank the DMRs by using logistic regresssion model. </li>
+	<li><code>dmr_selected4plot</code> : Plot figure and export raw/smoothed methylation data for selected DMR or MR.</li>
+	<li><code>dmr_map2genome</code> : Map all DMR/MRs to reference genome.</li>
+	<li><code>dmr_map2chromSegment</code> : Map all DMR/MRs to chromation segments generated from 6 human cell lines.</li>
+	<li><code>dmr_cal2genome_percent</code> : Calculate percentage of DMRs intersected with predefined genomic regions such as TSS, TES, 5dist et al.</li>
+	<li><code>dmr_cal2chromSegment_percent</code> :Calculate percentage of DMRs intersected with chromatin segments generated from 6 human celles.</li>
+	<li><code>dmr_percent2plot</code> : Plot percentage of DMRs in predefined genomic or chromatin segment regions.</li>
+	<li><code>dmr_combine2geneAnnot</code> : Combine annotations from both predefined genomic regions and chromatin segments (This function is slow and requests both genome and chromatin segment results available).</li>
+	<li><code>dmr_exportData</code>:  Plot and export data for DMRs/MRs located in specific regions (e.g., DMRs/MRs intersected with mutation block or enhancer regions).</li>
+	
 </ul>
 	
-## Module details:
-
-For more details of individual module and parameters, please go to repsective module page.
-
-[differential_expression](differential_expression.md)  
-[gene_regions](gene_regions.md)  
-[mussd](mussd.md)  
-[highly_mutated_blocks](highly_mutated_blocks.md)  
-[bayespi_bar](bayespi_bar.md)  
-[choose_background_parameters](choose_background_parameters.md)  
-[background_affinity_changes](background_affinity_changes.md)  
-[affinity_change_significance_test](affinity_change_significance_test.md)  
-[parallel](parallel.md)  
-[make_cluster4pwm](make_cluster4pwm.md)  
-[bpb3selectedPWM](bpb3selectedPWM.md)  
-  
-
 	
 ## Secondary Funtions:
 <div class="container-fluid abstract_des">
