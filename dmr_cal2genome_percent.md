@@ -27,10 +27,10 @@ Calculate percentage of DMRs in predfined genomic regions (e.g., TSS, TES, Gene,
   <li>
     <strong>Optional, has default values:</strong>
     <ul>
-      <li>-LsOrGt <code></code>, --in_Ls_or_Gt_pval <code></code><br>
+      <li>-LsOrGt <strong>, --in_Ls_or_Gt_pval </strong><br>
           Use less (0) or greater (1) than Probability value cutoff to search for DMRs, default=1 use greater than Probability value as cutoff to select DMRs
       </li>
-      <li>-inLRpb <code></code>, --in_LogReg_proba <code></code><br>
+      <li>-inLRpb <strong>, --in_LogReg_proba </strong><br>
           a probability value used by logistic Regression to select DMRs, default =0.8
       </li>
     </ul>
