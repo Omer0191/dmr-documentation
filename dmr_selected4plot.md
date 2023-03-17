@@ -17,13 +17,13 @@ dmr_analysis is a software tool for differentially Methylated Regions analysis t
   
   <h2>Optional Paramters </h2>
   
-  <li><strong>-inDMRFolder</code></strong>: A subfolder for storing exported MR/DMRs in each chromosome after running dmr_analysis_block, default is plots/ under <code>--in_data_folder</code>.</li>
-  <li><strong><code>-inAcCut</code></strong>: A range of clustering accuracy will be considered in the program, the default is "0.0,1.0" which means between 0.0 and 1.0.</li>
-  <li><strong><code>-inDmrSt</code></strong>: A string used in <code>--inDMR_file</code> that represents the predicted DMR, default is "D" representing prediced DMR.</li>
-  <li><strong><code>-inOtCod IN_OTHER_CONDITION</code></strong>: A string type for selecting DMR from the whole data such as, "logReg_proba_", "min_dmr_", "max_dmr_", "top_to_down_", "top_rank_", "down_rank_" , "None". default is "down_rank_10", 10 means 10 percentage. Usually, it shall use the default parameter to select DMRs for plotting.</li>
-  <li><strong><code>-inDstart</code></strong>: The postion of data start column in a file inputted from <code>--in_data_file</code>, default is 3 because the first three columns are chromosome positions such as chrom, start_post, end_post, data1, data2, ....</li>
-  <li><strong><code>-inIsExt</code></strong>: Whether to export data 1 or not export data 0 for selected DMR/MRs, default is 0 for not exporting data.</li>
-  <li><strong><code>-dotOrUnderscore</code></strong>: 0 for dot . split column label, 1 for underscore _ split column label in file <code>--in_data_file</code>, default=0 dot split column labels.</li>
+  <li><strong>-inDMRFolder</code></strong>: A subfolder for storing exported MR/DMRs in each chromosome after running dmr_analysis_block, default is plots/ under --in_data_folder.</li>
+  <li><strong>-inAcCut</strong>: A range of clustering accuracy will be considered in the program, the default is "0.0,1.0" which means between 0.0 and 1.0.</li>
+  <li><strong>-inDmrSt</strong>: A string used in <code>--inDMR_file</code> that represents the predicted DMR, default is "D" representing prediced DMR.</li>
+  <li><strong>-inOtCod IN_OTHER_CONDITION</strong>: A string type for selecting DMR from the whole data such as, "logReg_proba_", "min_dmr_", "max_dmr_", "top_to_down_", "top_rank_", "down_rank_" , "None". default is "down_rank_10", 10 means 10 percentage. Usually, it shall use the default parameter to select DMRs for plotting.</li>
+  <li><strong>-inDstart</strong>: The postion of data start column in a file inputted from <code>--in_data_file</code>, default is 3 because the first three columns are chromosome positions such as chrom, start_post, end_post, data1, data2, ....</li>
+  <li><strong>-inIsExt</strong>: Whether to export data 1 or not export data 0 for selected DMR/MRs, default is 0 for not exporting data.</li>
+  <li><strong>-dotOrUnderscore</strong>: 0 for dot . split column label, 1 for underscore _ split column label in file <code>--in_data_file</code>, default=0 dot split column labels.</li>
   
   
   <li><strong>-inIsPlt, --is_plot</strong> - whetehr to plot figure "1" or not plot figure "0" for selected DMR/MRs, default is 0 not plot figure</li>
