@@ -34,7 +34,7 @@ Significant test of TF binding affinity changes between the foreground and the b
   <li><strong>-mxL , --maximum_adjacency_length</strong>: maximum length of adjancey CpG sites is allowed in a methylation region (MR) , default = 250</li>
   <li><strong>-minS , --minimum_block_size</strong>: minimum number of CpG sites is requested in a block/methylatoin region (MR), default = 5</li>
   <li><strong>-nDP , --number_of_data_points</strong>: the number of data points (or rows from a dataframe) will be considered in analysis, default=0 that means all data points (or the combined dataframe from all samples and CpG sites) will be used. if it sets =1000 then only the first 1000 rows of dataframe will be used in the analysis. This option is for debuging purforse when using a small sample for testing</li>
-  <ul>
+ 
   <li><strong>-pC , --P_cutoff:</strong> P cutoff value for T-test or other statistic significance test used in the analysis, default is 0.05</li>
   <li><strong>-aC , --accuracy_cutoff:</strong> Clustering accuracy cutoff value for binary classification (e.g., DMR or not DMR; tumor or normal samples) of 2D t-SNE map, default is > 0.5. This option will be removed later because it does not affect the overall results!</li>
   <li><strong>-mPer , --minimum_percentage_changes:</strong> Minimum percentage of data points in a MR that passed a predefined filtering condition such as the methylation changes greater than a predefined cutoff value (e.g. -perC=0.1), default is 0.0001 = 0.1 percentage</li>
