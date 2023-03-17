@@ -14,6 +14,14 @@ dmr_analysis is a software tool for differentially Methylated Regions analysis t
 Significant test of TF binding affinity changes between the foreground and the background calculations
 
 ## Required Paramters
+<p>Required:</p>
+<ul>
+  <li>-in IN_FILE_FOLDER, --in_file_folder IN_FILE_FOLDER<br>input file folder for DNA methylation data such as WGBS. In this folder, all samples are provided in each chromosome folder with BED format where sample name is indicated by file name.</li>
+  <li>-chr CHROMOSOME, --chromosome CHROMOSOME<br>select a chromosome for running dmr_analysis_block. For example, a chromosome (e.g., chrY) file folder under --in_file_folder that contains methylation data of samples in a chromosome (e.g., chrY)</li>
+  <li>-gkey GROUP_KEY, --group_key GROUP_KEY<br>group key name, all bed files name contain this group_key will be combined together for dmr_analysis_block. In other words, only bed file name with this group_key will be selected in analysis. Usually, it is the same as the file folder (or chromosome name) in --chromosome.</li>
+</ul>
+
+
 <ul>
   <li><code>background_folder: </code> Folder containing the computed background model "
                                                                 "produced by background_affinity_changes.py",</li>
