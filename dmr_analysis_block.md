@@ -16,9 +16,9 @@ Significant test of TF binding affinity changes between the foreground and the b
 ## Required Paramters
 <p>Required:</p>
 <ul>
-  <li>-in IN_FILE_FOLDER, --in_file_folder IN_FILE_FOLDER<br>input file folder for DNA methylation data such as WGBS. In this folder, all samples are provided in each chromosome folder with BED format where sample name is indicated by file name.</li>
-  <li>-chr CHROMOSOME, --chromosome CHROMOSOME<br>select a chromosome for running dmr_analysis_block. For example, a chromosome (e.g., chrY) file folder under --in_file_folder that contains methylation data of samples in a chromosome (e.g., chrY)</li>
-  <li>-gkey GROUP_KEY, --group_key GROUP_KEY<br>group key name, all bed files name contain this group_key will be combined together for dmr_analysis_block. In other words, only bed file name with this group_key will be selected in analysis. Usually, it is the same as the file folder (or chromosome name) in --chromosome.</li>
+  <li><code>-in IN_FILE_FOLDER, --in_file_folder IN_FILE_FOLDER</code><br>input file folder for DNA methylation data such as WGBS. In this folder, all samples are provided in each chromosome folder with BED format where sample name is indicated by file name.</li>
+  <li><code>-chr CHROMOSOME, --chromosome CHROMOSOME</code><br>select a chromosome for running dmr_analysis_block. For example, a chromosome (e.g., chrY) file folder under --in_file_folder that contains methylation data of samples in a chromosome (e.g., chrY)</li>
+  <li><code>-gkey GROUP_KEY, --group_key GROUP_KEY</code><br>group key name, all bed files name contain this group_key will be combined together for dmr_analysis_block. In other words, only bed file name with this group_key will be selected in analysis. Usually, it is the same as the file folder (or chromosome name) in --chromosome.</li>
 </ul>
 
 
