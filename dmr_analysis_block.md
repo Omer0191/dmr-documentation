@@ -22,14 +22,6 @@ Significant test of TF binding affinity changes between the foreground and the b
 </ul>
 
 
-<ul>
-  <li><code>background_folder: </code> Folder containing the computed background model "
-                                                                "produced by background_affinity_changes.py",</li>
-<li><code>foreground_folder: </code> Folder containing the computed delta-dba values for "
-                                                                "patient data produced by bayespi_bar.py"</li>
- 
-  
-</ul>
 
 ## Optional Parameters
 
