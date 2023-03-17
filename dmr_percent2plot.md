@@ -7,7 +7,7 @@ dmr_analysis is a software tool for differentially Methylated Regions analysis t
 [Home](index.md) | [DMR Block Analysis](dmr_analysis_block.md) | [Combine MultiChr4Rank](dmr_combine_multChrs4rank.md) | [Selected4plot](dmr_selected4plot.md) | [map2genome](dmr_map2genome.md) | [map2chromSegment](dmr_map2chromSegment.md) | [cal2genome_percent](dmr_cal2genome_percent.md) | [cal2chromSegment_percent](dmr_cal2chromSegment_percent.md) | [percent2plot](dmr_percent2plot.md) | [combine2geneAnnot](dmr_combine2geneAnnot.md) | [exportData](dmr_exportData.md)
 
 ## percent2plot
-<p>This program selects parameters (block size, mutation distribution, set of PWM files) for background computation based on selected mutation blocks obtained by mussd.py. It will create a shell script with the command to create the background model with selected parameters.</p>
+<p>Plot percentage of DMRs in predefined genomic regions or predicted chromatin segment regions.</p>
 
 
 
