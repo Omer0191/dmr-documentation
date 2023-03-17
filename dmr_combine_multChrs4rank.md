@@ -5,39 +5,26 @@ dmr_analysis is a software tool for differentially Methylated Regions analysis t
 
 
 [Home](index.md) | [DMR Block Analysis](dmr_analysis_block.md) | [Combine MultiChr4Rank](dmr_combine_multChrs4rank.md) | [Selected4plot](dmr_selected4plot.md) | [map2genome](dmr_map2genome.md) | [map2chromSegment](dmr_map2chromSegment.md) | [cal2genome_percent](dmr_cal2genome_percent.md) | [cal2chromSegment_percent](dmr_cal2chromSegment_percent.md) | [percent2plot](dmr_percent2plot.md) | [combine2geneAnnot](dmr_combine2geneAnnot.md) | [exportData](dmr_exportData.md)   
-## background_affinity_changes
-<p>This program is used to compute mutation backgrounds based on selected parameters.</p>
 
+## Combine MultiChr4Rank
+<p>This program is used to Combine DMR/MRs from multiple chromomoses.</p>
+<strong>Required:</strong>
 
 <ul>
-  <li><code>block_size: </code> the size of the block to take for background. It should be similar to size of the actual patient block that will be tested against this background, default is None</li>
-    <li><code>genome: </code> reference genome in FASTA format</li>
-    <li><code>regions: </code>BED file with regions of interest from which to take the background samples. This should be similar to regions of interest that were used to filter the mutations</li>
-
-
-<li><code>mutations_distribution: </code>a space-separated list of numbers that represent the distribution of the number of mutations to apply to each background block. It should be similar to distribution of mutation counts in actual patients in the blocks. mussd.py outputs these distributions in the last column of the block_summary.tsv file. Give one number to have a constant mutation count in each background block, default is None</li>
-  <li><code>result_folder: </code> Folder to put the results (will be erased), default is result</li>
-<li><code>block_resample_iterations: </code> Number of times to perform sampling of blocks from regions. On each iteration, a number of random block will be selected from regions, default=1</li>
-  <li><code>block_samples_to_take: </code> Number of samples to take from regions on each resampling iteration. For each sample, a region is chosen randomly from the input regions without replacement, and then a block of specified size is chosen randomly from that region. If this number is not specified, it is equal to the number of regions, meaning that each region will be sampled once, default is None" </li>
-    <li><code>mutation_signature: </code> File containing the mutation signature to apply when generating mutations. Tab-separated two-column file with a header. First column is a k-mer specification with a nucleotide replacement in square brackets, i.e. A[C>A]A specifies a 3-mer mutation ACA -> AAA. The second column is the probability of the given replacement. Reverse-complement replacement will have the same probability. Default is None</li>  
- <li><code>background_mutations: </code> File containing background mutations to use. Tab-separated file without a header with at least 4 columns: chromosome, position, reference nucleotide, alternate nucleotide. If given, only these mutations will be selected in background blocks, default is None </li>
-<li><code>pwm_folder: </code> Folder containing TF binding models in BayesPI .mlp format</li>
-<li><code>chemical_potentials: </code> List of chemical potentials to use </li>
-<li><code>iterations: </code> Iteration count for background affinity distribution calculation, default=10000</li>
-  <li><code>p_value_cutoff: </code> Maximum dbA p-value to consider protein-DNA binding significanti, default=0.1</li>
-<li><code>max_rank: </code> Maximum rank of a PWM file in the rankings to add to the background model , default = 30</li>
-<li><code>normalize_dba: </code> Divide each dbA value by its standard deviation in the background sequence set, default is False</li>
-<li><code>integration: </code> Method to integrate delta-dbA values obtained from different chemical potentials, default = pca</li>
-  <li><code>seed: </code> Random seed for background affinity sampling. 0 means time-based seed, default is 1</li>
-<li><code>start_from_integration: </code>do not compute the random blocks and their delta-dbA values, assume they are already computed. Start from integration, default is False.</li>
-  <li><code>reuse_output: </code> Do not recompute the random blocks and their dbA values if they are already present in the result folder. This mode can handle partially computed results from an interrupted computation. Only the missing or corrupted output will be recomputed, default is False.</li>
+  <li><code>-inChrs IN_CHROMS_NUMBER, --in_chroms_number IN_CHROMS_NUMBER</code>: a string of chromosomes that need be combined such as chr1,chr2,chr3</li>
+  <li><code>-inFold IN_FILE_FOLDER, --in_file_folder IN_FILE_FOLDER</code>: a file folder of MR data in each chromosome that is exported by dmr_analysis_block</li>
 </ul>
+<strong>Optional, has default values:</strong>
 
-### Parallelization Paramters:
 <ul>
-  <li><code>use_cores: </code>number of cores to use on one machine </li>
-<li><code>use_slurm: </code>use SLURM workload manager to distribute computations across nodes</li>
-  <li><code>slurm_account: </code> SLURM account name</li>
-<li><code>max_nodes: </code>maximum number of nodes to allocate when using SLURM</li>
-
+  <li><code>-inSFold , --in_File_subFolder</code>: a subfolder of exported MR data in each chromosome based on dmr_analysis_block, default = plots that is under each chromosome folder</li>
+  <li><code>-inMPer , --in_minimum_percentage_changes</code>: parameter of minimum percentage of data points in a MR with a predefined methylation changes greater than a cutoff, default=0.0001</li>
+  <li><code>-inPC , --in_Pvalue_cutoff</code>: P value cutoff for significance test, default = 0.05</li>
+  <li><code>-inIsSmd , --in_is_smoothed_data</code>: is result based on raw =0, interpolated =1 , or smoothed =2 data, default= 0</li>
+  <li><code>-inAC , --in_accuracy_cutoff_range</code>: range of clustering accurancy, default include all (e.g. from 0.0 to 1.0) is 0.0,1.1</li>
+  <li><code>-inDMRst , --in_DMR_string_type</code>: a string used to represent predicted DMR in the file, default is D for prediced DMR</li>
+  <li><code>-inLRpb , --in_LogReg_proba</code>: a probability value used by logistic Regression to select DMRs, default =0.8</li>
+  <li><code>-inMT , --in_moderate_ttest</code>: 0 for standard T-test, 1 for moderate T-test, and 2 for KS-test for evaluating the test of significance, default=0</li>
+  <li><code>-inLMH IN_LOW_MEDIAN_HIGH_CUTOFF, --in_low_median_high_cutoff IN_LOW_MEDIAN_HIGH_CUTOFF</code>: use high, median, or low minimum percentage change for DMR ranking, default = high</li>
+  <li><code>-inFEstr IN_FILE_ENDING_STRING, --in_file_ending_string IN_FILE_ENDING_STRING</code>: file name ending string that will be used to search for results file in result folder (e.g., chrY/plots/), default = _all</li>
 </ul>
