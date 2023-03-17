@@ -26,11 +26,13 @@ Significant test of TF binding affinity changes between the foreground and the b
 ## Optional Parameters
 
 <ul>
-  <li><code>output_file: </code> Output file name, default is - </li>
-<li><code>p_value: </code> P-value cutoff for the Wilcoxon test, default=0.05</li>
-  <li><code>max_rank: </code> Maximum rank of PWM to consider in the patient results, default=15 </li>
-<li><code>exact_test: </code> Use exact Wilcoxon rank-sum test from R. R needs to be installed, default is False"</li>
-  <li><code>pval_correction: </code> Whether adjust P-values by bonferroni correction, default is False"</li>
-<li><code>: </code></li>
-  
-</ul>
+  <li><strong>-out , --out_file_folder</strong>: output file folder that store all results computed by dmr_analysis_block, default is out/</li>
+  <li><strong>-ncol , --need_column</strong>: select a columan name from bed file that will be used by dmr_analysis_block. For example, there are only six columns allowed in a bed file and the column labels will be added automatically such as (Chrs, Starts, Ends, Methylation, Total_counts, Strand) after loading the data. Here, if we assumes the fourth column of the input bed file is the methylation level, then --need_column = Methylation, default = Methylation</li>
+  <li><strong>-wtStr , --wildType_fileString</strong>: Use the first few character string of a file name to indicate it is a normal/wide type sample, or to labele this file/sample as wide type/normal condition. For example, if a file name under a chromosome folder of --in_file_folder starts with gcb_meht1_* is a wild type/control/normal sample, then --wildType_fileString is gcb. Default is gcb in the program</li>
+  <li><strong>-dstart , --data_start_position</strong>: data start position, a start column position for input dataframe after methylation levels of multiple samples are combined into one file , default is 3 for chrY demo. Please note, it starts from 0 index at here. for example, in file chrY_MR_data4maxBlockDistanc*.gz, column labels are started from "chrs", "pos_start", "pos_end", "data1" "data2", ..., "datam", where the first 3 columns are chromosome positions, then the --data_start_position is 3. From the data_start_position to the data_end_position are all availble data columns of combined samples. For example, there are 12 samples in chrY demo, then th data_start_position=3 and data_end_position=15, which is the default setting in the program. Usually, these two parameters do not need to be changed if data size of input file is the same format as chrY_MR_data4maxBlockDistance*.gz</li>
+  <li><strong>-dend , --data_end_position</strong>: data end position, an end column position for input dataframe after methylation levels of multiple samples are combined into one file, default is 15 for chrY demo. More information please refer to "--data_start_position". Please note that data_end_position - data_start_position = total number of input samples</li>
+  <li><strong>-mxL , --maximum_adjacency_length</strong>: maximum length of adjancey CpG sites is allowed in a methylation region (MR) , default = 250</li>
+  <li><strong>-minS , --minimum_block_size</strong>: minimum number of CpG sites is requested in a block/methylatoin region (MR), default = 5</li>
+  <li><strong>-nDP , --number_of_data_points</strong>: the number of data points (or rows from a dataframe) will be considered in analysis, default=0 that means all data points (or the combined dataframe from all samples and CpG sites) will be used. if it sets =1000 then only the first 1000 rows of dataframe will be used in the analysis. This option is for debuging purforse when using a small sample for testing</li>
+  <li><strong>-pC , --
+
