@@ -34,5 +34,16 @@ Significant test of TF binding affinity changes between the foreground and the b
   <li><strong>-mxL , --maximum_adjacency_length</strong>: maximum length of adjancey CpG sites is allowed in a methylation region (MR) , default = 250</li>
   <li><strong>-minS , --minimum_block_size</strong>: minimum number of CpG sites is requested in a block/methylatoin region (MR), default = 5</li>
   <li><strong>-nDP , --number_of_data_points</strong>: the number of data points (or rows from a dataframe) will be considered in analysis, default=0 that means all data points (or the combined dataframe from all samples and CpG sites) will be used. if it sets =1000 then only the first 1000 rows of dataframe will be used in the analysis. This option is for debuging purforse when using a small sample for testing</li>
-  <li><strong>-pC , --
+  <ul>
+  <li><strong>-pC , --P_cutoff:</strong> P cutoff value for T-test or other statistic significance test used in the analysis, default is 0.05</li>
+  <li><strong>-aC , --accuracy_cutoff:</strong> Clustering accuracy cutoff value for binary classification (e.g., DMR or not DMR; tumor or normal samples) of 2D t-SNE map, default is > 0.5. This option will be removed later because it does not affect the overall results!</li>
+  <li><strong>-mPer , --minimum_percentage_changes:</strong> Minimum percentage of data points in a MR that passed a predefined filtering condition such as the methylation changes greater than a predefined cutoff value (e.g. -perC=0.1), default is 0.0001 = 0.1 percentage</li>
+  <li><strong>-perC , --percentage_cutoff:</strong> A comma separated string list for predefined cutoff values (e.g., 0.07,0.15,0.2) of percentage of methylation changes between the two groups is low, median, high, respectively. For example, in smoothed data points, a difference of methylation levels between the tumor and the normal samples can be set >0.07, 0.15, >0.2 for low, median, high changes, respectively. where methylation levels are between 0 and 1. Default parameter is 0.07,0.15,0.2</li>
+  <li><strong>-lmhC , --low_median_high_cutoff:</strong> Use low, median, or high percentage changes (e.g., one of the inputs from --percentage_cutoff) to predict high confidence DMRs. Here, use 0, 1, or 2 to represent low, median, or high percentage cutoff for the prediction. default is 2 (high percentage changes in --percentage_cutoff)</li>
+  <li><strong>-numPro , --number_of_processes:</strong> Number of parallel processes will be used in calculation, default is 1</li>
+  <li><strong>-isSmd , --is_smoothed_data:</strong> Here, use 0, 1, or 2 to represent raw data, interpolated data, or smoothed data are used, respectively, in predicting DMRs when compared the two groups, default is 2 - use smoothed data points to predict DMRs</li>
+  <li><strong>-isMT , --is_moderate_ttest:</strong> 0 is standard T-test, 1 is moderate T-test, and 2 is KS-test for evaluating the significance of differential methylation between the two groups across all CpG sites in a MR. Default is 0, uses a T-test to test the significance. The moderate T-test is slower than T-test</li>
+  <li><strong>-isExt , --is_export_data:</strong> 0 is not exporting data, 1 is exporting data during the analysis, where both raw and smoothed methylation levels of all DMRs will be exported, default is 0</li>
+  <li><strong>-dotOrUnderscore , --column_splitBy_dotOrUnderscore:</strong> 0 for using dot . to split column labels, 1 for using underscore _ to split column labels, default=0 using dot to split column labels</li>
+</ul>
 
