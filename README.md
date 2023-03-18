@@ -6,7 +6,7 @@ DMR-Analysis: A Differentially Methylated Region Analysis Tool
 usage:  dmr_analysis task args
 
 ## Tasks available for using:
-    <ul>
+<ul>
   <li>
     <code>dmr_analysis_block</code>
     - Predict Differentially Methylated Region (DMR) from genome-wide methylation regions such as by using WGBS or other similar techniques
