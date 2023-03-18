@@ -1,49 +1,23 @@
-# bpb3
-bpb3 --help
-usage:  bpb3 <task> [<args>]
+# dmr_analysis
 
-     Tasks available for using:
-         differential_expression        Predict differentialy expressed genes (DEG) based on 
-                                        two group of samples.
-         gene_regions           Extracts regions near transcription start sites of selected 
-                                genes based on genCode gtf. 
-         mussd                  Mutation filtering based on the Space and Sample Distribution 
-                                - MuSSD. 
-         highly_mutated_blocks  Find blocks with significantly more mutations than would be expected.
-         bayespi_bar            BayesPI-BAR delta-dbA ranking computation for TF binding affinity 
-                                affected by DNA mutation.
-         choose_background_parameters   Selects parameters for mutation background computation.
-         background_affinity_changes    Mutation background computation.
-         affinity_change_significance_test      Significant test of TF binding affinity changes 
-                                                between foreground and background affinity changes.
-         parallel               Run commands from the given file in parallel.
-         make_cluster4pwm       Make input PWM files for bpb3 based on clustered PWMs.
-         bpb3selectedPWM        The second level analysis of bpb3 by using the top PWMs in TF ranking 
-                                after the first level analysis of bpb3 based on the clustered PWMs. 
-         run_pipeline           Run full bpb3 pipeline (e.g., the first level analysis of bpb3 if 
-                                clustered PWMs are used in the calculation).
-         clean_tmp              Clean temporary files from output folders.
+usage:  dmr_analysis <task> [<args>]
 
-     Tasks available for demo purpose:
-         plot_result            Generate heatmaps for selected mutation blocks. (demo) 
-         filter_results_by_gene_expression_cluster4pwm  Filter those TF whose expression is too 
-                                                        low in clustered PWMs. (demo)
-         filter_results_by_gene_expression              Filter those TFs whose expression is too 
-                                                        low (e.g., RPKM<0.03). (demo)
-         make_plots_cluster4pwm         Make heatmap plots for all significant mutation blocks 
-                                        that affecting clustered PWMs. (demo)
-         make_plots                     Make heatmap plots for all significant mutation blocks 
-                                        that affecting PWMs. (demo)
-         check_accuracy4cluster Check accuracy for 67 SNPs that based on clustered PWMs. (demo)
-         check_accuracy         Check accuracy for 67 SNPs that based on original PWMs. (demo)
-         filterDEG4bpb3         Filter bpb3 exported differential expression gene list by rratios. (demo)
-         preprocess_icgc_data   Preprocess of ICGC data such as a folder contains files donor_*, 
-                                specimen, simple_somatic*, exp_seq.tsv et al. (demo)
-     
- BayesPI-BAR in Python3 - bpb3
+Tasks available for using:
+    dmr_analysis_block 	Predict Differentially Methylated Region (DMR) from genome-wide methylation regions such as by using WGBS or other similar techniques        
+    dmr_combine_multChrs4rank 	Combine predicted DMRs/MRs from multiple chromosomes then rank the DMRs by using logistic regresssion model
+    dmr_selected4plot 	Plot figure and export raw/smoothed methylation data for selected DMR or MR
+    dmr_map2genome 	Map all DMR/MRs to reference genome
+    dmr_map2chromSegment 	Map all DMR/MRs to chromation segments generated from 6 human cell lines
+    dmr_cal2genome_percent 	Calculate percentage of DMRs intersected with predefined genomic regions such as TSS, TES, 5dist et al.
+    dmr_cal2chromSegment_percent 	Calculate percentage of DMRs intersected with chromatin segments generated from 6 human celles 
+    dmr_percent2plot 	Plot percentage of DMRs in predefined genomic or chromatin segment regions
+    dmr_combine2geneAnnot 	Combine annotations from both predefined genomic regions and chromatin segments (This function is slow and requests both genome and chromatin segment results available)
+    dmr_exportData	Plot and export data for DMRs/MRs located in specific regions (e.g., DMRs/MRs intersected with mutation block or enhancer regions)
 
- positional arguments:
+DMR-Analysis: A Differentially Methylated Region Analysis Tool
+
+positional arguments:
   task        Pipeline task to run
 
- optional arguments:
+optional arguments:
   -h, --help  show this help message and exit
