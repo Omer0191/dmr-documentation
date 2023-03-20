@@ -96,9 +96,9 @@ For more details, follow the readme file in the package.
 	
 ## Demos
 
-[Demo1: FL](demo1.md)
-[Demo2: HAP](demo2.md)
-[Demo3: RAT](demo3.md)
+[Demo1: FL](demo1.md) | 
+[Demo2: HAP](demo2.md) | 
+[Demo3: RAT](demo3.md) 
 	
          	
            			
