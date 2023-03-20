@@ -94,7 +94,13 @@ For more details, follow the readme file in the package.
 	
 </ul>
 	
-
+## Demos
+<ul>
+	<li>[Demo1: FL](demo1.md)</li>
+	<li>[Demo2: HAP](demo2.md)</li>
+	<li>[Demo3: RAT](demo3.md)</li>
+</ul>
+	
          	
            			
          	
