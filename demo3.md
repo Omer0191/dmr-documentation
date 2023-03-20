@@ -5,8 +5,8 @@
 <p>
 This script is a Bash script that calls the dmr_analysis program to predict differentially methylated regions (DMRs) and methylated regions (MRs) from whole-genome bisulfite sequencing (WGBS) data.
 
-The demo assumes that the input data is already prepared in bed format, organized in chromosome named folders, and that the genome size file and refFlat files are available in a separate folder. Some initial parameter setting is done in the start of the script file as follows:
-  <code>
+The demo assumes that the input data is already prepared in bed format, organized in chromosome named folders, and that the genome size file and refFlat files are available in a separate folder. Some initial parameter setting is done in the start of the script file as follows:</p>
+ <pre> <code>
 #!/bin/bash
 #use bash script to call dmr_analysis
 #this demo does not include chromatin segment data and no combination of restuls from genomic regions with chromatin segmentations.
@@ -41,11 +41,14 @@ logProb_cutoff=0.7
 out_file4genome_map=control_vs_test_DMR_hyper_hypo_mix_${logProb_cutoff}.csv
 #a file name that contains all ranked DMRs by combining results from all chromosomes
 mr_IN_FILE='*_chroms_all_mr_data_range_dmrRanking'
-</code>
-  In the first step, dmr_analysis_block module is used to predict DMRs in chr1, chr2, chr3, chrX and chrY. 
+</pre></code>
+
+<p>
+In the first step, dmr_analysis_block module is used to predict DMRs in chr1, chr2, chr3, chrX and chrY. 
 The predicted DMRs and MRs are then exported to the output data folder, and the results from all chromosomes are combined and ranked. They are combined using scripts dmr_combine_multChrs4rank to combine and rank the DMRs across multiple chromosomes.
 
-  <code>
+  </p>
+ <pre> <code>
 #STEP 1. run dmr_analysis to predict DMRs
 #a) do dmr_analysis in blocks
 for in_chrom in chr1 chr2 chr3 chrX chrY
@@ -73,9 +76,13 @@ dmr_analysis dmr_combine_multChrs4rank \
         --in_low_median_high_cutoff high \
         --in_file_ending_string _range.tsv 
 echo dmr_combine_multChrs4rank – Done
-</code>
-In the second step, the script plots using dmr_selected4plot and exports data for selected DMRs using the module dmr_exportData. The code and parameter setting can be seen as follows:
-<code>
+</pre></code>
+
+
+<p>
+  In the second step, the script plots using dmr_selected4plot and exports data for selected DMRs using the module dmr_exportData. The code and parameter setting can be seen as follows:
+</p>
+ <pre> <code>
 #STEP 2. Plot and export data for selected DMRs
 #-- please note the name of in_DMR_file may be changed in different run because of the parameters, the total number of input and the top percentage et al
 chrom='chr3'
@@ -104,9 +111,11 @@ dmr_analysis dmr_exportData  \
                        --input_file_format 0 \
                        --wildType_fileString ${in_wildType_string} --input_file test_mr.bed
 echo export selected MR - Done
- </code>
+</pre> </code>
+ <p>
 In the third step, it maps the predicted DMRs and MRs to predefined genomic regions using hmst-seq-analyzer. This demo also includes several parameters that can be manually adjusted , such as the path of the input and output data folders, the name of output folders and files, and the selected DMRs for plotting. In part a, genomic regions are generated. In the part b, DMRs are mapped into genomic regions defined in part a. Part c performs percentage calculations of DMR in annotated genomic regions while these percentages are plotted in the last step d. 
-<code>
+</p>
+ <pre> <code>
 #STEP 3. mapp predicted DMR/MRs to predefined genomic regions (e.g., TSS, TES, 5dist etl al) or predicted chromatin segments for further analysis
 #below is a result file generated from dmr_combine_multChrs4rank, where DMR/MRs from multiple chromosomes are combined and ranked them by logisitic regression model 
 #-- Please note this file name needs to be input manually because it is generated after running "dmr_combine_multChrs4rank" and expored at "out_result_folder"
@@ -142,10 +151,9 @@ echo dmr_cal2genome_percent - Done
 dmr_analysis dmr_percent2plot --in_countFile_folder ${out_result_folder}/${out_folder4genome_map} \
         --in_countFile_name ${out_file4genome_map}
 echo dmr_percent2plot - Done
-</code>
+</pre></code>
 
   
 
 ![image](https://user-images.githubusercontent.com/79196757/226301872-bccc8e80-dd59-4de7-9769-8d425d70caea.png)
 
-</p>
