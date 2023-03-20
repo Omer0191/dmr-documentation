@@ -96,7 +96,7 @@ The predicted DMRs and MRs are then exported to the output data folder, and the 
   in_wildType_string='_Ctrl'
 
   #a) some additional features for plotting and exporting data
-  # select DMR for ploting such as mr5,mr9,mr11
+  #select DMR for ploting such as mr5,mr9,mr11
   #here --in_DMR_file is exported by dmr_combine_multChrs4rank in "out_result_folder"/chrY/plots
   ##--in_data_file is exported by dmr_analysis_block in "out_result_folder"/chrY
   dmr_analysis dmr_selected4plot --in_DMR_file ${in_DMR_file} \
@@ -162,5 +162,4 @@ In the third step, it maps the predicted DMRs and MRs to predefined genomic regi
 </pre>
   
 
-![image](https://user-images.githubusercontent.com/79196757/226301872-bccc8e80-dd59-4de7-9769-8d425d70caea.png)
 
