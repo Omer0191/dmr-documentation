@@ -1,5 +1,8 @@
 # DMR Analysis Demo3
 
+[Home](index.md) | [Demo1](demo1.md) | [Demo2](demo2.md) | [Demo3](demo3.md)
+
+
 ## RAT
 
 <p>
@@ -44,6 +47,19 @@ out_file4genome_map=control_vs_test_DMR_hyper_hypo_mix_${logProb_cutoff}.csv
 mr_IN_FILE='*_chroms_all_mr_data_range_dmrRanking'
 </pre>
 
+WGBS methylation profiles in bed format looks like the following
+<pre>
+chr1    1606571 1606571 1.00    5       +
+chr1    1606572 1606572 0.80    5       -
+chr1    1607216 1607216 0.75    8       +
+chr1    1607268 1607268 1.00    7       +
+chr1    1607591 1607591 0.57    7       +
+chr1    1608764 1608764 0.81    16      +
+chr1    1608765 1608765 0.71    14      -
+chr1    1608920 1608920 0.25    12      +
+chr1    1608921 1608921 0.71    14      -
+chr1    1608956 1608956 0.33    9       +
+</pre>
 <p>
 In the first step, the DMRs are predicted and then predicted DMRs and MRs are then exported to the output data folder, and the results from all chromosomes are combined and ranked.  
 <ul>
