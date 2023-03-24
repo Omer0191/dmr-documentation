@@ -6,9 +6,38 @@
 ## RAT
 
 <p>
-This script is a Bash script that calls the dmr_analysis program to predict differentially methylated regions (DMRs) and methylated regions (MRs) from whole-genome bisulfite sequencing (WGBS) data.
+This script is a Bash script that calls the dmr_analysis program to predict differentially methylated regions (DMRs) and methylated regions (MRs) from whole-genome bisulfite sequencing (WGBS) data.</p>
 
-The demo assumes that the input data is already prepared in bed format, organized in chromosome named folders, and that the genome size file and refFlat files are available in a separate folder. Some initial parameter setting is done in the start of the script file as follows:</p>
+
+## Run Demo3:
+  
+  Demo3 can be run by executing the bash script given with the pacakge. In this demo DNA methylation Regions are found and ranked.
+  
+  <pre>
+  sbatch job_dmr
+   </pre>
+ While job_dmr is run in a cluster computer (SAGA) provided by Norwegian Research Infrastructure Services(NRIS). job_dmr looks like this
+ <pre>
+#!/bin/bash
+#SBATCH --job-name=demo3-dmr
+#SBATCH --account=nn4605k
+#SBATCH --time=15:00:00
+#SBATCH --mem-per-cpu=15G --partition=bigmem 
+# Number of cores:
+#SBATCH --cpus-per-task=20
+
+#set up job enviroment
+#source /etc/profile.d/modules.csh
+#source /cluster/bin/jobsetup
+#module use --append /cluster/etc/modulefiles
+#module load java/jdk1.7.0_80
+#module unload Java/1.8.0_212
+#module purge
+#module --ignore-cache load Java/1.7.0_80
+module load BEDTools/2.27.1-foss-2018b
+./run_rat_part1_test.sh   
+</pre>
+ <p> Here this job calls a shell script file <code>run_rat_part1_test.sh</code>. This script is prepared by calling different modules of the dmr analysis. The demo assumes that the input data is already prepared in bed format, organized in chromosome named folders, and that the genome size file and refFlat files are available in a separate folder. Some initial parameter setting is done in the start of the script file as follows:</p>
  
  <pre> 
 #!/bin/bash
@@ -47,7 +76,8 @@ out_file4genome_map=control_vs_test_DMR_hyper_hypo_mix_${logProb_cutoff}.csv
 mr_IN_FILE='*_chroms_all_mr_data_range_dmrRanking'
 </pre>
 
-WGBS methylation profiles in bed format looks like the following
+WGBS methylation profiles (input) in bed format looks like the following.
+Path: <code>final_demo_data/rat_data/out_data/DMR_CpG_context</code>
 <pre>
 chr1    1606571 1606571 1.00    5       +
 chr1    1606572 1606572 0.80    5       -
@@ -182,6 +212,33 @@ dmr_analysis dmr_percent2plot --in_countFile_folder ${out_result_folder}/${out_f
         --in_countFile_name ${out_file4genome_map}
 echo dmr_percent2plot - Done
 </pre>
-  
+ 
+ ## Output
+ Output produced can be found under the folder: 
+ final_demo_data/rat_data/out_data/DMR_CpG_context/
+ 
+ A log file is maintained to track the progress and steps of pipeline.
+ <pre>
+ Tue, 14 Mar 2023 19:06:10 INFO     File load ['../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1/chr1_MR_data4maxBlockDistance_1000_minBlockSize_5_data.txt.gz'] 
+Tue, 14 Mar 2023 19:06:10 INFO     Blocks with distance greater than 1000 
+Tue, 14 Mar 2023 19:06:10 INFO      and minimum data points in block 5
+Tue, 14 Mar 2023 19:06:10 INFO     block size 29 
+Tue, 14 Mar 2023 19:06:10 INFO     Export data in  ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1_MR_data4maxBlockDistance_1000_minBlockSize_5_data.txt
+Tue, 14 Mar 2023 19:06:11 INFO     minimum MR length 139 
+Tue, 14 Mar 2023 19:06:11 INFO     maximum MR length 143799 
+Tue, 14 Mar 2023 19:06:11 INFO     Maximum length of adjancey CpG sites in a block 1000 
+Tue, 14 Mar 2023 19:06:11 INFO     Hist plot n [ 0  2  1  4  3 15  2  2] 
+Tue, 14 Mar 2023 19:06:11 INFO              bins [   100    139    500   1000   5000  10000  50000 100000 143899] 
+Tue, 14 Mar 2023 19:06:11 INFO     mininum MR data size 5
+Tue, 14 Mar 2023 19:06:11 INFO     maximum MR data size 3429
+Tue, 14 Mar 2023 19:06:17 INFO     Wild type /control sample file name is _Ctrl 
+Tue, 14 Mar 2023 19:06:17 INFO     Wild/control sample 5 , 
+Tue, 14 Mar 2023 19:06:17 INFO     Tumor/KO sample 5 , 
+Tue, 14 Mar 2023 19:06:17 INFO     DMR export path ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1/plots
+Tue, 14 Mar 2023 19:06:17 INFO     DMR export MR data path ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1/data
+Tue, 14 Mar 2023 19:06:17 INFO     Do parallel calculation by using 15 processes 
+Tue, 14 Mar 2023 19:31:23 INFO     Export all position results at : ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1/plots/chr1_all_mr_data.tsv
+Tue, 14 Mar 2023 19:31:23 INFO     Export range position results at : ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1/plots/chr1_all_mr_data_range.tsv
+</pre>
 
 
