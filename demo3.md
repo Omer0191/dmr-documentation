@@ -13,9 +13,8 @@ This script is a Bash script that calls the dmr_analysis program to predict diff
   
   Demo3 can be run by executing the bash script given with the pacakge. In this demo DNA methylation Regions are found and ranked.
   
-  <pre>
-  sbatch job_dmr
-   </pre>
+<pre>
+sbatch job_dmr</pre>
  While job_dmr is run in a cluster computer (SAGA) provided by Norwegian Research Infrastructure Services(NRIS). job_dmr looks like this
  <pre>
 #!/bin/bash
