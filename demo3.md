@@ -6,7 +6,7 @@
 ## RAT
 
 <p>
-This script is a Bash script that calls the dmr_analysis program to predict differentially methylated regions (DMRs) and methylated regions (MRs) from whole-genome bisulfite sequencing (WGBS) data.</p>
+This script is a Bash script that calls the dmr_analysis program to predict differentially methylated regions (DMRs) and methylated regions (MRs) from whole-genome bisulfite sequencing (WGBS) RAT data.</p>
 
 
 ## Run Demo3:
