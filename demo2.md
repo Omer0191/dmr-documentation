@@ -43,8 +43,10 @@ module load BEDTools/2.27.1-foss-2018b
  
  
 <strong>In folder path: </strong> final_demo_data/hap1_cell/in_data/WGBS-data/
-  <strong>Out folder path: </strong> final_demo_data/hap1_cell/out_data/DMR_CpG_context
- <pre> 
+
+<strong>Out folder path: </strong> final_demo_data/hap1_cell/out_data/DMR_CpG_context/
+
+<pre> 
 #!/bin/bash
 
 #!/bin/bash
