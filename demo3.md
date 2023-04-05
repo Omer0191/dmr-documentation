@@ -38,6 +38,12 @@ module load BEDTools/2.27.1-foss-2018b
 </pre>
  <p> Here this job calls a shell script file <code>run_rat_part1_test.sh</code>. This script is prepared by calling different modules of the dmr analysis. The demo assumes that the input data is already prepared in bed format, organized in chromosome named folders, and that the genome size file and refFlat files are available in a separate folder. Some initial parameter setting is done in the start of the script file as follows:</p>
  
+ 
+ 
+<strong>In folder path: </strong> final_demo_data/rat_data/in_data/WGBS-data/
+
+<strong>Out folder path: </strong> final_demo_data/rat_data/out_data/DMR_CpG_context/
+
  <pre> 
 #!/bin/bash
 #use bash script to call dmr_analysis
