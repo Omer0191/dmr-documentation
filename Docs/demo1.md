@@ -17,11 +17,10 @@ This script is a Bash script that calls the dmr_analysis program to predict diff
   
 <pre>
 sbatch job_dmr</pre>
- While job_dmr is run in a cluster computer (SAGA) provided by Norwegian Research Infrastructure Services(NRIS). job_dmr looks like this
+ While <code>job_dmr</code> is run in a cluster computer (SAGA) provided by Norwegian Research Infrastructure Services(NRIS). Remember to change this according to your machine. <code>job_dmr</code> looks like this
  <pre>
 #!/bin/bash
 #SBATCH --job-name=demo1-dmr
-#SBATCH --account=nn4605k
 #SBATCH --time=15:00:00
 #SBATCH --mem-per-cpu=15G --partition=bigmem 
 # Number of cores:
@@ -39,6 +38,7 @@ sbatch job_dmr</pre>
 module load BEDTools/2.27.1-foss-2018b
 ./demo1_dmr_analysis_fl_12samples.sh  
 </pre>
+
  <p> Here this job calls a shell script file <code>demo1_dmr_analysis_fl_12samples.sh</code>. This script is prepared by calling different modules of the dmr analysis. The demo assumes that the input data is already prepared in bed format, organized in chromosome named folders, and that the genome size file and refFlat files are available in a separate folder. Some initial parameter setting is done in the start of the script file as follows:</p>
 
 <strong>In folder path: </strong> final_demo_data/fl_12samples/in_data/WGBS-data/
@@ -86,6 +86,7 @@ out_file4chromSeg_map=gcb_vs_tumor_DMR_hyper_hypo_mix_in_chromSeg_${logProb_cuto
 mr_IN_FILE='2_chroms_all_mr_data_range_dmrRanking'
 </pre>
 
+<strong>In folder path: </strong> final_demo_data/fl_12samples/in_data/WGBS-data/
 WGBS methylation profiles (input) in bed format looks like the following.
 Path: <code>final_demo_data/fl_12samples/in_data/WGBS-data/chr18/</code>
 <pre>
@@ -108,6 +109,7 @@ In the first step, the DMRs are predicted and then predicted DMRs and MRs are th
  </ul>
 </p>
  
+### Step 1: 
 <pre> 
 
 #STEP 1. run dmr_analysis to predict DMRs
@@ -139,6 +141,7 @@ dmr_analysis dmr_combine_multChrs4rank \
 echo dmr_combine_multChrs4rank - Done
 </pre>
 
+### Step 2:
 <p>
   In the second step, the script plots using dmr_selected4plot and exports data for selected DMRs using the module dmr_exportData. The code and parameter setting can be seen as follows:
  <ul>
@@ -179,6 +182,7 @@ dmr_analysis dmr_exportData  \
 
 echo "dmr_ExportData -- Done"
 </pre> 
+### Step 3:
 <p>
 In the third step, it maps the predicted DMRs and MRs to predefined genomic regions using hmst-seq-analyzer. This demo also includes several parameters that can be manually adjusted , such as the path of the input and output data folders, the name of output folders and files, and the selected DMRs for plotting. 
  
@@ -189,6 +193,7 @@ In the third step, it maps the predicted DMRs and MRs to predefined genomic regi
   <li> These percentages from part c are plotted in the last step d..</li>
  </ul>     
 </p>
+
 <pre> 
 #STEP 3. mapp predicted DMR/MRs to predefined genomic regions (e.g., TSS, TES, 5dist etl al) or predicted chromatin segments for further analysis
 #below is a result file generated from dmr_combine_multChrs4rank, where DMR/MRs from multiple chromosomes are combined and ranked them by logisitic regression model 
