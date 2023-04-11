@@ -289,7 +289,8 @@ Thu, 30 Mar 2023 12:32:36 INFO     Export all position results at : ../../final_
 Thu, 30 Mar 2023 12:32:36 INFO     Export range position results at : ../../final_demo_data/fl_12samples/out_data/DMR_CpG_context/chrY/plots/chrY_all_mr_data_range.tsv
 </pre>
 The output file contain information about DMR and are ranked. Each row shows one region with the pvalue of smoothed and interpolated data, percentages and many other values conculated in the pipeline. 
-Here is how an output file look like :
+Here is how an output file look like : 
+<code>final_demo_data/fl_12samples/out_data/DMR_CpG_context/chrY/plots/chrY_all_mr_data_range.tsv</code>
 <pre>
 mr_id   T-test_pval_smoothed_data       T-test_pval_interpolated_data   percent_data_passed_ttest       gcb_vs_grpsDist_pval    tumor_vs_grpsDist_pval  gcb_vs_grpsDist_tval    tumor_vs_grpsDist_tval  cluster_accuracy        low_negative_tumor_vs_gcb_percent median_negative_tumor_vs_gcb_percent    high_negative_tumor_vs_gcb_percent      low_positive_tumor_vs_gcb_percent       median_positive_tumor_vs_gcb_percent  high_positive_tumor_vs_gcb_percent      is_DMR  position  DMR_type        chroms  log10_gcb_vs_grpsDist_pval      log10_tumor_vs_grpsDist_pval    log10_gcb_vs_grpsDist_pval_minMaxNorm   log10_tumor_vs_grpsDist_pval_minMaxNorm dmr_weight_score        percent_data_passed_ttest_gt_pvallogReg_score     logReg_predicted_dmr
 mr1130  0.000405656     0.00432085      0.0     0.761592        0.297122        0.310908        -1.05249        0.5     0.166667        0.0     0.0   0.0     0.0     0.0     U       chr18,63982541-63982589,5       mix     chr18   0.11827755858580184       0.5270650160086492      0.01702962203404642     0.07612316109961371     0.07490444530138562     0.0     -6.823775494058065      0.0010864253038653845
@@ -301,7 +302,7 @@ mr842   0.980768        0.999694        0.0     0.247502        0.162594        
 mr467   0.0104659       0.0635359       0.0     0.433502        0.977244        -0.830386       0.0286541       0.5     0.0     0.0     0.0     0.0229885       0.00383142      0.0     U       chr18,59743199-59745815,33      mix     chr18     0.36300877509976437     0.009996934354542979    0.05237849778855943     0.0014420025324108899   0.06861128005135525     0.0     -6.783096637705215      0.0011314800117390564
 </pre>
 
-Top two rows of all results file looks like following. It gives information about methylated region, its relative chromosome number, logistic regression probablity and genome information.
+Top two rows of all results file looks like following. It gives information about methylated region, its relative chromosome number, logistic regression probablity and gene information.
 
 <pre>
 mr_chrs mr_start_pos    mr_end_pos      mr_info mr_logReg_proba genome_info     chromSegment_info
