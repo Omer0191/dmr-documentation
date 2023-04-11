@@ -17,11 +17,11 @@ This script is a Bash script that calls the dmr_analysis program to predict diff
   
 <pre>
 sbatch job_dmr</pre>
- While job_dmr is run in a cluster computer (SAGA) provided by Norwegian Research Infrastructure Services(NRIS). job_dmr looks like this
- <pre>
+While <code>job_dmr</code> is run in a cluster computer (SAGA) provided by Norwegian Research Infrastructure Services(NRIS). Remember to change this according to your machine. <code>job_dmr</code> looks like this
+
+<pre>
 #!/bin/bash
 #SBATCH --job-name=demo2-dmr
-#SBATCH --account=nn4605k
 #SBATCH --time=5:00:00
 #SBATCH --mem-per-cpu=15G --partition=bigmem 
 # Number of cores:
@@ -87,6 +87,8 @@ out_file4chromSeg_map='wild_vs_ko_DMR_hyper_hypo_mix_in_chromSeg_0.7.csv'
 mr_IN_FILE='3_chroms_all_mr_data_range_dmrRanking'
 </pre>
 
+<strong>In folder path: </strong> final_demo_data/hap1_cell/in_data/WGBS-data/
+
 WGBS methylation profiles (input) in bed format looks like the following.
 Path: <code>final_demo_data/fl_12samples/in_data/WGBS-data/chr18/</code>
 <pre>
@@ -100,6 +102,8 @@ chr3    8102775 8102775 0.60    5       -
 chr3    8102842 8102842 0.94    17      +
 chr3    8103610 8103610 0.67    6       -
 </pre>
+
+### Step 1: DMR Prediction
 <p>
 In the first step, the DMRs are predicted and then predicted DMRs and MRs are then exported to the output data folder, and the results from all chromosomes are combined and ranked.  
 <ul>
@@ -141,6 +145,8 @@ echo dmr_combine_multChrs4rank - Done
 
 </pre>
 
+### Step 2: Plot and Export DMRs
+
 <p>
   In the second step, the script plots using dmr_selected4plot and exports data for selected DMRs using the module dmr_exportData. The code and parameter setting can be seen as follows:
  <ul>
@@ -181,6 +187,9 @@ dmr_analysis dmr_exportData  \
                        --wildType_fileString ${in_wildType_string} --input_file test_mr.bed
 echo export selected MR - Done
 </pre> 
+
+### Step 3: DMR mapping:
+
 <p>
 In the third step, it maps the predicted DMRs and MRs to predefined genomic regions using hmst-seq-analyzer. This demo also includes several parameters that can be manually adjusted , such as the path of the input and output data folders, the name of output folders and files, and the selected DMRs for plotting. 
  
@@ -303,5 +312,5 @@ Top two rows of all results file looks like following. It gives information abou
 mr_chrs mr_start_pos    mr_end_pos      mr_info mr_logReg_proba genome_info     chromSegment_info
 chr3    8102773 8107735 chr3:mr1:mix:D  0.987977        chr3:7501658:8496658:NR_033378||5distD:5000:1000000||LMCD1AS1:-:8221146:8501658~chr3:7644798:8639798:NM_001256748||5distD:5000:1000000||SSUH2:-:8619402:8644798~chr3:7652084:8647084:NM_015931||5distD:5000:1000000||SSUH2:-:8619402:8652084~chr3:7769614:8764614:NM_000916||5distD:5000:1000000||OXTR:-:875040:8769614~chr3:7769232:8764232:NM_001354655||5distD:5000:1000000||OXTR:-:8750408:8769232~chr3:7768731:8763731:NM_001354656||5distD:5000:1000000||OXTR:-:8750408:8768731~chr3:7963472:8958472:NM_020165||5distD:5000:1000000||RAD18:-:8877074:8963472~chr3:8021307:8216146||intergenic:5000:1000~chr3:7540284:8535284:NR_046606||5dist:5000:1000000||GRM7AS1:-:7519740:7535284~chr3:8021307:9016307:NR_110131||5dist:5000:1000000||LOC101927394:-:7952804:8016307~chr3:7501806:8496806:NM_001278234||5dist:5000:1000000||LMCD1:+:8501806:8568125~chr3:7501822:8496822:NM_001278233&NM_001278235||5dist:5000:1000000||LMCD1:+:8501822:8574668&8551274~chr3:7571781:8566781:NR_024065||5dist:5000:1000000||LINC00312:+:8571781:8574668~chr3:7733801:8728801:NM_001234||5dist:5000:1000000||CAV3:+:8733801:8746758 R~T
 chr3    8108750 8115603 chr3:mr2:mix:D  0.981631  chr3:7501658:8496658:NR_033378||5distD:5000:1000000||LMCD1AS1:-:8221146:8501658~chr3:7644798:8639798:NM_001256748||5distD:5000:1000000||SSUH2:-:86194028644798~chr3:7652084:8647084:NM_015931||5distD:5000:1000000||SSUH2:-:8619402:8652084~chr3:7769614:8764614:NM_000916||5distD:5000:1000000||OXTR:-:8750408:8769614~chr3:7769232:8764232:NM_001354655||5distD:5000:1000000||OXTR:-:8750408:8769232~chr3:7768731:8763731:NM_001354656||5distD:5000:1000000||OXTR:-:8750408:8768731~chr3:7963472:8958472:NM_020165||5distD:5000:1000000||RAD18:-:8877074:8963472~chr3:8021307:8216146||intergenic:5000:1000~chr3:7540284:853584:NR_046606||5dist:5000:1000000||GRM7AS1:-:7519740:7535284~chr3:8021307:9016307:NR_110131||5dist:5000:1000000||LOC101927394:-:7952804:8016307~chr3:7501806:8496806:NM_001278234||5dist:5000:1000000||LMCD1:+:8501806:8568125~chr3:7501822:8496822:NM_001278233&NM_001278235||5dist:5000:1000000||LMCD1:+:8501822:8574668&8551274~chr3:7571781:8566781:NR_024065||5dist:5000:1000000||LINC00312:+:8571781:8574668~chr3:7733801:8728801:NM_001234||5dist:5000:1000000||CAV3:+:8733801:8746758 PF~R~CTCF~T~E~WE
-chr3    8119920 8125713 chr3:mr3:mix:D  0.977218        chr3:7501658:8496658:NR_033378||5distD:5000:1000000||LMCD1AS1:-:8221146:8501658~chr3:7644798:8639798:NM_001256748||5distD:5000:1000000||SSUH2:-:8619402:8644798~chr3:7652084:8647084:NM_015931||5distD:5000:1000000||SSUH2:-:8619402:8652084~chr3:7769614:8764614:NM_000916||5distD:5000:1000000||OXTR:-:875040:8769614~chr3:7769232:8764232:NM_001354655||5distD:5000:1000000||OXTR:-:8750408:8769232~chr3:7768731:8763731:NM_001354656||5distD:5000:1000000||OXTR:-:8750408:8768731~chr3:7963472:8958472:NM_020165||5distD:5000:1000000||RAD18:-:8877074:8963472~chr3:8021307:8216146||intergenic:5000:1000~chr3:7540284:8535284:NR_046606||5dist:5000:1000000||GRM7AS1:-:7519740:7535284~chr3:8021307:9016307:NR_110131||5dist:5000:1000000||LOC101927394:-:7952804:8016307~chr3:7501806:8496806:NM_001278234||5dist:5000:1000000||LMCD1:+:8501806:8568125~chr3:7501822:8496822:NM_001278233&NM_001278235||5dist:5000:1000000||LMCD1:+:8501822:8574668&8551274~chr3:7571781:8566781:NR_024065||5dist:5000:1000000||LINC00312:+:8571781:8574668~chr3:7733801:8728801:NM_001234||5dist:5000:1000000||CAV3:+:8733801:8746758 R~T
+
 </pre>
