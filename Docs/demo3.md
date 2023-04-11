@@ -15,11 +15,10 @@ This script is a Bash script that calls the dmr_analysis program to predict diff
   
 <pre>
 sbatch job_dmr</pre>
- While job_dmr is run in a cluster computer (SAGA) provided by Norwegian Research Infrastructure Services(NRIS). job_dmr looks like this
- <pre>
+While <code>job_dmr</code> is run in a cluster computer (SAGA) provided by Norwegian Research Infrastructure Services(NRIS). Remember to change this according to your machine. <code>job_dmr</code> looks like this
+<pre>
 #!/bin/bash
 #SBATCH --job-name=demo3-dmr
-#SBATCH --account=nn4605k
 #SBATCH --time=15:00:00
 #SBATCH --mem-per-cpu=15G --partition=bigmem 
 # Number of cores:
