@@ -58,7 +58,6 @@ For more details, follow the readme file in the package.
 		
 		
 ## Contents of the package:
-<div class="container-fluid abstract_des">
 		
 <p>The package folder will contain following:
 	</p>
@@ -73,7 +72,6 @@ For more details, follow the readme file in the package.
 
 </ul>	
 	
-</div>
 
 	
 ## Pipeline Tasks:
