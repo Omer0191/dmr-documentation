@@ -46,7 +46,7 @@ conda activate dmr_env</pre>
 
 These dependencies can be installed one by one. For example:
 
-<code>pip install numpy==1.21.5</code>
+<pre>pip install numpy==1.21.5</pre>
 	
 A requirments.txt file is given with the package. All requiremnts can be automatically installed using one command:
 <pre>pip install -r requirements.txt</pre>
