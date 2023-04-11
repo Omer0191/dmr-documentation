@@ -17,46 +17,57 @@ dmr_analysis is a software tool for differentially Methylated Regions analysis t
 
 ## Modules:
 [Home](index.md) | [DMR Block Analysis](dmr_analysis_block.md) | [Combine MultiChr4Rank](dmr_combine_multChrs4rank.md) | [Selected4plot](dmr_selected4plot.md) | [map2genome](dmr_map2genome.md) | [map2chromSegment](dmr_map2chromSegment.md) | [cal2genome_percent](dmr_cal2genome_percent.md) | [cal2chromSegment_percent](dmr_cal2chromSegment_percent.md) | [percent2plot](dmr_percent2plot.md) | [combine2geneAnnot](dmr_combine2geneAnnot.md) | [exportData](dmr_exportData.md)   
-## How to start:
+
+
+## Download:
+
 <div class="container-fluid abstract_des">
 dmr_analysis is written in python. It can be installed and accessed from command line and is avalible for both linux and mac operating systems. The package can be downloaded <strong> here </strong> .
 
-Prior to installing the package, dependencies must be fulfilled. List of dependencies is as follows:
-<ul>
-	<li>bedtools</li>
-	<li>setuptools</li>
-	<li>itertools</li>
-	<li>pandas</li>
-	<li>numpy</li>
-	<li>argparse</li>
-	<li>os</li>
-	<li>shutil</li>
-	<li>multiprocessing</li>
-	<li>matplotlib</li>
-	<li>seaborn</li>
-	<li>datetime</li>
-	<li>scipy</li>
-	<li>tempfile</li>
-	<li>time</li>
-
-</ul>
-It is advised to install dependencies using miniconda.
-Package contains a file requirments.txt which can be used for automatic installation of dependencies from conda or pip.
-To install the package, go to the dmr_analysis directory and type: python setup.py install
-For more details, follow the readme file in the package.
-</div>
-	
+	<pre>
+	wget link here
+	</pre>
+	</div>
 	
 ## Installation:
-<div class="container-fluid abstract_des">
-		
-<p>You can download and install the package by follwing steps:
-	</p>
-<pre class="bash"><code class="hljs"><span class="hljs-comment"> tar -zxf dmr_analysis.tgz</span>
-<span class="hljs-comment"> cd dmr_analysis</span>
-<span class="hljs-comment"> python setup.py install</span></code></pre>
-	</div>	
+
+
+	It is highly recommended to create a separate virtual environment for the package to avoid any library conflicts problem. You you create virtual environment using the following commands. We recommend to use install and use miniconda/anaconda (https://docs.conda.io/en/latest/miniconda.html). Tutorial of creating and updating virtual commands can be found <a href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html"> here</a>.
 	
+	<pre>
+	conda create --name dmr_env
+	conda activate dmr_env
+	</pre>
+
+	Prior to installing the package, dependencies must be fulfilled. It is advised to install dependencies using miniconda. List of dependencies is as follows:
+<ul>
+  <li>matplotlib==3.5.3</li>
+  <li>numpy==1.21.5</li>
+  <li>pandas==1.4.4</li>
+  <li>scikit_learn==1.2.2</li>
+  <li>scipy==1.9.1</li>
+  <li>setuptools==65.6.3</li>
+  <li>statsmodels==0.13.5</li>
+</ul>
+
+
+
+These dependencies can be installed one by one. For example:
+	<code>pip install numpy==1.21.5</code>
+	
+	A requirments.txt file is given with the package. All requiremnts can be automatically installed using one command:
+	<pre>
+	pip install -r requirements.txt
+	</pre>
+
+You can install the package using pip command, go to the dmr_analysis directory (folder containing setup.py) and type the following command
+	<pre>
+	python setup.py install
+	</pre>
+
+For more details, follow the readme file in the package.
+		
+		
 ## Contents of the package:
 <div class="container-fluid abstract_des">
 		
