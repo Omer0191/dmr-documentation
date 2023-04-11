@@ -21,25 +21,17 @@ dmr_analysis is a software tool for differentially Methylated Regions analysis t
 
 ## Download:
 
-<div class="container-fluid abstract_des">
 dmr_analysis is written in python. It can be installed and accessed from command line and is avalible for both linux and mac operating systems. The package can be downloaded <strong> here </strong> .
 
-	<pre>
-	wget link here
-	</pre>
-	</div>
+<pre>wget link here</pre>
 	
 ## Installation:
-
-
-	It is highly recommended to create a separate virtual environment for the package to avoid any library conflicts problem. You you create virtual environment using the following commands. We recommend to use install and use miniconda/anaconda (https://docs.conda.io/en/latest/miniconda.html). Tutorial of creating and updating virtual commands can be found <a href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html"> here</a>.
+<p>It is highly recommended to create a separate virtual environment for the package to avoid any library conflicts problem. You you create virtual environment using the following commands. We recommend to use install and use miniconda/anaconda (https://docs.conda.io/en/latest/miniconda.html). Tutorial of creating and updating virtual commands can be found <a href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html"> here</a>. </p>
 	
-	<pre>
-	conda create --name dmr_env
-	conda activate dmr_env
-	</pre>
+<pre>conda create --name dmr_env
+conda activate dmr_env</pre>
 
-	Prior to installing the package, dependencies must be fulfilled. It is advised to install dependencies using miniconda. List of dependencies is as follows:
+<p>Prior to installing the package, dependencies must be fulfilled. It is advised to install dependencies using miniconda. List of dependencies is as follows: </p>
 <ul>
   <li>matplotlib==3.5.3</li>
   <li>numpy==1.21.5</li>
@@ -53,17 +45,14 @@ dmr_analysis is written in python. It can be installed and accessed from command
 
 
 These dependencies can be installed one by one. For example:
-	<code>pip install numpy==1.21.5</code>
-	
-	A requirments.txt file is given with the package. All requiremnts can be automatically installed using one command:
-	<pre>
-	pip install -r requirements.txt
-	</pre>
 
-You can install the package using pip command, go to the dmr_analysis directory (folder containing setup.py) and type the following command
-	<pre>
-	python setup.py install
-	</pre>
+<code>pip install numpy==1.21.5</code>
+	
+A requirments.txt file is given with the package. All requiremnts can be automatically installed using one command:
+<pre>pip install -r requirements.txt</pre>
+
+You can install the package using following command, go to the dmr_analysis directory (folder containing setup.py) and type the following command
+<pre>python setup.py install</pre>
 
 For more details, follow the readme file in the package.
 		
