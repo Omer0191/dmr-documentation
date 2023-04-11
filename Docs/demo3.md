@@ -80,6 +80,8 @@ out_file4genome_map=control_vs_test_DMR_hyper_hypo_mix_${logProb_cutoff}.csv
 mr_IN_FILE='*_chroms_all_mr_data_range_dmrRanking'
 </pre>
 
+<strong>In folder path: </strong> final_demo_data/rat_data/in_data/WGBS-data/
+
 WGBS methylation profiles (input) in bed format looks like the following.
 Path: <code>final_demo_data/rat_data/out_data/DMR_CpG_context</code>
 <pre>
@@ -94,6 +96,8 @@ chr1    1608920 1608920 0.25    12      +
 chr1    1608921 1608921 0.71    14      -
 chr1    1608956 1608956 0.33    9       +
 </pre>
+
+### Step 1: DMR Prediction:
 <p>
 In the first step, the DMRs are predicted and then predicted DMRs and MRs are then exported to the output data folder, and the results from all chromosomes are combined and ranked.  
 <ul>
@@ -131,6 +135,7 @@ In the first step, the DMRs are predicted and then predicted DMRs and MRs are th
           --in_file_ending_string _range.tsv 
   echo dmr_combine_multChrs4rank – Done
 </pre>
+### Step 2: DMR Plot and Export:
 
 <p>
   In the second step, the script plots using dmr_selected4plot and exports data for selected DMRs using the module dmr_exportData. The code and parameter setting can be seen as follows:
@@ -139,6 +144,7 @@ In the first step, the DMRs are predicted and then predicted DMRs and MRs are th
  <li> In part b, output data and results are then exported using dmr_exportData module. </li>
  </ul>
 </p>
+
  <pre> 
  #STEP 2. Plot and export data for selected DMRs
 #-- please note the name of in_DMR_file may be changed in different run because of the parameters, the total number of input and the top percentage et al
@@ -169,6 +175,9 @@ dmr_analysis dmr_exportData  \
                        --wildType_fileString ${in_wildType_string} --input_file test_mr.bed
 echo export selected MR - Done
 </pre> 
+
+### Step 3: DMR Mapping:
+
 <p>
 In the third step, it maps the predicted DMRs and MRs to predefined genomic regions using hmst-seq-analyzer. This demo also includes several parameters that can be manually adjusted , such as the path of the input and output data folders, the name of output folders and files, and the selected DMRs for plotting. 
  
