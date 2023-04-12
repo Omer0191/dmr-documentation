@@ -27,7 +27,12 @@ dmr_analysis is written in python. It can be installed and accessed from command
 	
 ## Installation:
 <p>It is highly recommended to create a separate virtual environment for the package to avoid any library conflicts problem. You you create virtual environment using the following commands. We recommend to use install and use miniconda/anaconda (https://docs.conda.io/en/latest/miniconda.html). Tutorial of creating and updating virtual commands can be found at (https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) </p> 
-	
+
+If the minicinda is already installed, then you can proceed with the following step by step installation. We have already provided a quick installation setup file named quick_install.sh for your ease. A simple bash command will do everything autmatically and prepare the package, ready to run. 
+<pre> ./quick_install </pre>
+
+However step by step details are given as under:
+
 <pre>conda create --name dmr_env
 conda activate dmr_env</pre>
 
