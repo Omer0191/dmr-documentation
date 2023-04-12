@@ -31,6 +31,11 @@ dmr_analysis is written in python. It can be installed and accessed from command
 <pre>conda create --name dmr_env
 conda activate dmr_env</pre>
 
+<p>Install pip if not already installed: </p>
+<pre> conda install pip</pre>
+
+Please allow any other installations when prompted
+
 <p>Prior to installing the package, dependencies must be fulfilled. It is advised to install dependencies using miniconda. List of dependencies is as follows: </p>
 <ul>
   <li>matplotlib==3.5.3</li>
@@ -51,8 +56,8 @@ These dependencies can be installed one by one. For example:
 A requirments.txt file is given with the package. All requiremnts can be automatically installed using one command:
 <pre>pip install -r requirements.txt</pre>
 
-You can install the package using following command, go to the dmr_analysis directory (folder containing setup.py) and type the following command
-<pre>python setup.py install</pre>
+You can install the package using following command, go to the dmr_analysis directory (folder containing setup.py and pyproject.toml) and type the following command
+<pre>pip install .</pre>
 
 For more details, follow the readme file in the package.
 		
