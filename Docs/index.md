@@ -31,9 +31,9 @@ dmr_analysis is written in python. It can be installed and accessed from command
 If the minicinda is already installed, then you can proceed with the following step by step installation. We have already provided a quick installation setup file named quick_install.sh for your ease. A simple bash command will do everything autmatically and prepare the package, ready to run. 
 <pre> ./quick_install </pre>
 
-However step by step details are given as under:
+However step by step details are given as under and can be following if quick_install.sh is unsuccessful:
 
-<pre>conda create --name dmr_env
+<pre>conda create --name dmr_env python==3.9.16
 conda activate dmr_env</pre>
 
 <p>Install pip if not already installed: </p>
