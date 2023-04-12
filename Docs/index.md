@@ -21,9 +21,9 @@ dmr_analysis is a software tool for differentially Methylated Regions analysis t
 
 ## Download:
 
-dmr_analysis is written in python. It can be installed and accessed from command line and is avalible for both linux and mac operating systems. The package can be downloaded <strong> here </strong> .
+dmr_analysis is written in python. It can be installed and accessed from command line and is avalible for both linux and mac operating systems. The package can be downloaded <strong> <a href="https://github.com/Omer0191/dmr-documentation/archive/refs/heads/main.zip>" here </a></strong> . Or type command:
 
-<pre>wget link here</pre>
+<pre>wget https://github.com/Omer0191/dmr-documentation/archive/refs/heads/main.zip </pre>
 	
 ## Installation:
 <p>It is highly recommended to create a separate virtual environment for the package to avoid any library conflicts problem. You you create virtual environment using the following commands. We recommend to use install and use miniconda/anaconda (https://docs.conda.io/en/latest/miniconda.html). Tutorial of creating and updating virtual commands can be found <a href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html"> here</a>. </p>
