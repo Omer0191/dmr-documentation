@@ -1,0 +1,10 @@
+<keymap version="1" name="Mac OS X 10.5+ copy" parent="Mac OS X 10.5+">
+  <action id="ActivateProjectToolWindow" />
+  <action id="CommentByLineComment">
+    <keyboard-shortcut first-keystroke="meta slash" />
+    <keyboard-shortcut first-keystroke="meta divide" />
+    <keyboard-shortcut first-keystroke="meta 1" />
+  </action>
+  <action id="DuplicatesForm.SendToLeft" />
+  <action id="FileChooser.GotoHome" />
+</keymap>

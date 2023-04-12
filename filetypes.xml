@@ -1,0 +1,17 @@
+<application>
+  <component name="FileTypeManager" version="18">
+    <ignoreFiles list="*$py.class;*.pyc;*.pyo;*.rbc;*.yarb;*~;.DS_Store;.git;.hg;.svn;CVS;__pycache__;_svn;vssver.scc;vssver2.scc" />
+    <extensionMap>
+      <mapping pattern="job_skin" type="AUTO_DETECTED" />
+      <mapping pattern="run_skin" type="AUTO_DETECTED" />
+      <mapping pattern="run_fl" type="AUTO_DETECTED" />
+      <mapping pattern="run_breast" type="AUTO_DETECTED" />
+      <mapping pattern="bayesPI" type="PLAIN_TEXT" />
+      <mapping pattern="requirements" type="PLAIN_TEXT" />
+      <mapping pattern="tail_mlsg_200b_dmrs" type="PLAIN_TEXT" />
+      <mapping ext="mlp" type="PLAIN_TEXT" />
+      <mapping ext="slurm" type="Shell Script" />
+      <removed_mapping ext="gz" approved="true" type="PLAIN_TEXT" />
+    </extensionMap>
+  </component>
+</application>
