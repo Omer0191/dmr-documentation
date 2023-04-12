@@ -26,7 +26,7 @@ dmr_analysis is written in python. It can be installed and accessed from command
 <pre>wget https://github.com/Omer0191/dmr-documentation/archive/refs/heads/main.zip </pre>
 	
 ## Installation:
-<p>It is highly recommended to create a separate virtual environment for the package to avoid any library conflicts problem. You you create virtual environment using the following commands. We recommend to use install and use miniconda/anaconda (https://docs.conda.io/en/latest/miniconda.html). Tutorial of creating and updating virtual commands can be found</p> [Here](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) 
+<p>It is highly recommended to create a separate virtual environment for the package to avoid any library conflicts problem. You you create virtual environment using the following commands. We recommend to use install and use miniconda/anaconda (https://docs.conda.io/en/latest/miniconda.html). Tutorial of creating and updating virtual commands can be found at (https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) </p> 
 	
 <pre>conda create --name dmr_env
 conda activate dmr_env</pre>
