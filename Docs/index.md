@@ -50,11 +50,19 @@ Please allow any other installations when prompted
   <li>scipy==1.9.1</li>
   <li>setuptools==65.6.3</li>
   <li>statsmodels==0.13.5</li>
+  <li>bedtools==2.27.0</li>
 </ul>
 
 
 
-These dependencies can be installed one by one. For example:
+These dependencies can be installed one by one using conda manager. For example:
+
+<pre>conda install numpy==1.21.5</pre>
+	
+A requirments.txt file is given with the package. All requiremnts can be automatically installed using one command:
+<pre>conda install --file requirements.txt</pre>
+
+Or can be installed using pip.
 
 <pre>pip install numpy==1.21.5</pre>
 	
@@ -65,7 +73,8 @@ You can install the package using following command, go to the dmr_analysis dire
 <pre>pip install .</pre>
 
 For more details, follow the readme file in the package.
-		
+
+You also need to install <strong>hmst_seq_analyser</strong> from [here](https://hmst-seq.github.io/hmst/) . Instruction on how to install are also given on the webpage.
 		
 ## Contents of the package:
 		
