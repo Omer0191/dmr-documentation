@@ -125,4 +125,4 @@ You also need to install <strong>hmst_seq_analyser</strong> from [here](https://
          		
          	
 Having trouble with package? Contact us @ junbai.wang@medisin.uio.no and we will be glad to help you.
-You can go to look inside the https://github.com/dmr-analysis/dmr_analysis/archive/refs/heads/master.zip
+You can go to look inside the https://github.com/dmr-analysis/dmr_analysis
