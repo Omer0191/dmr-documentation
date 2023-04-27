@@ -75,7 +75,6 @@ You can install the package using following command, go to the dmr_analysis dire
 
 For more details, follow the readme file in the package.
 
-You also need to install <strong>hmst_seq_analyser</strong> from [here](https://hmst-seq.github.io/hmst/) . Instruction on how to install are also given on the webpage.
 		
 ## Contents of the package:
 		
