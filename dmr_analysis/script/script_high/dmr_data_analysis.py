@@ -336,11 +336,11 @@ def do_PCA_analysis(all_smooth,gcb_col_idx,tumor_col_idx, tmp_column_names) :
 def do_tSNE_analysis(all_smooth, gcb_col_idx, tumor_col_idx ):
     ''' Perform t-distributed Stochastic Neighbor Embedding analysis on all_smooth 
     '''
-    #tSNE analysis
+    #tSNE analysis is changed in new version of sklearn >1.2.0 which requires preplexity smaller than samples size
     if  min(len(gcb_col_idx),len(tumor_col_idx)) >4:
         num2perplexity= min(len(gcb_col_idx),len(tumor_col_idx))
     else:
-        num2perplexity= 5
+        num2perplexity= len(gcb_col_idx)+len(tumor_col_idx)-1
 
     tsne = TSNE(n_components=2,learning_rate=1000,perplexity = num2perplexity,early_exaggeration = 12,init = 'random',  random_state=2019)
     X_tsne = tsne.fit_transform(all_smooth)

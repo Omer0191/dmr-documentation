@@ -2,7 +2,7 @@ import pandas as pd
 import os
 #exec(open('map_dmr2genome.py').read())
 
-def count_dmrs_not_mapped2genome(in_sorted_dmr_file,record_out_files,dmr_min_cutoff):
+def count_dmrs_not_mapped2genome(in_sorted_dmr_file,record_out_files,dmr_min_cutoff, is_greater=True):
   #count how many DMRs are not mapped to annotated geneomic regions
   #coumt MR or DMR in genomic files
   all_data_df=[]
@@ -23,12 +23,21 @@ def count_dmrs_not_mapped2genome(in_sorted_dmr_file,record_out_files,dmr_min_cut
   uq_indata_df=all_indata_df.drop_duplicates(subset=['mr_sites'])
   total_uq_mrs=uq_indata_df
   min_cutoff=dmr_min_cutoff
-  total_uq_dmrs=uq_indata_df[uq_indata_df['mr_logReg_proba']>=min_cutoff]
+  
+  if is_greater:
+    print('DMR selection based on >= '+ str(min_cutoff))
+    total_uq_dmrs=uq_indata_df[uq_indata_df['mr_logReg_proba']>=min_cutoff]
+  else:
+    print('DMR selection based on <= ' + str(min_cutoff))
+    total_uq_dmrs=uq_indata_df[uq_indata_df['mr_logReg_proba']<=min_cutoff]
 
   in_dmrs_df=pd.read_csv(in_sorted_dmr_file,header=None,sep='\t')
   in_dmrs_df.columns=['mr_chrs','mr_start_pos','mr_end_pos','mr_sites','mr_logReg_proba']
   total_in_mrs=in_dmrs_df
-  total_in_dmrs=in_dmrs_df[in_dmrs_df['mr_logReg_proba']>=min_cutoff]
+  if is_greater:
+    total_in_dmrs=in_dmrs_df[in_dmrs_df['mr_logReg_proba']>=min_cutoff]
+  else:
+    total_in_dmrs=in_dmrs_df[in_dmrs_df['mr_logReg_proba']<=min_cutoff]
 
   print('Number of MR or DMR do not find mapped genome information')
   print(total_uq_mrs.shape[0]-total_in_mrs.shape[0])

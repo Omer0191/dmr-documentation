@@ -19,11 +19,13 @@ def my_parser(parser):
 
    optional= parser.add_argument_group('Optional , has default values')
    optional.add_argument('-minOlp','--in_minimum_overlap4bedtools', default=1e-9, metavar='', type=float, help='minimum overlap rate in bedtools intersection, default is 1e-9 or 1bp overlap, which is float number between 0 and 1.')
+   optional.add_argument('-dmrCutoff','--dmr_min_cutoff', default= 0 , metavar='', type=float, help='minimum cutoff value for selecting DMR, default is 0 which means the >= dmr_min_cutoff value will be' \
+	 ' selected from accompanied parameter file of in_sortedDMR_file, otherwise, it will use the input <= dmr_min_cutoff   ')
 
    return parser
 
 
-def main(region_files, methylation_file, reference_file, in_sorted_dmr_file, dmr_min_cutoff,out_folder,min_overlap):
+def main(region_files, methylation_file, reference_file, in_sorted_dmr_file, dmr_min_cutoff,out_folder,min_overlap,is_greater=True):
   #for each region to find its DMR or MRs
   #there is a bug in recent bedtools but bedtools2.2 version works, now use *_range instead of *_all file for regions overlapping, which works in both old and new version of bedtools
   record_out_files=[]
@@ -77,7 +79,12 @@ def main(region_files, methylation_file, reference_file, in_sorted_dmr_file, dmr
   #count how many DMRs are not mapped to annotated geneomic regions
   #coumt MR or DMR in genomic files
   #dmr_min_cutoff=0.8
-  total, dict_chr=count_dmrs_not_mapped2genome(in_sorted_dmr_file,record_out_files,dmr_min_cutoff)
+  if is_greater:
+      #default set use >= min_cutoff for selecting DMRs
+      total, dict_chr=count_dmrs_not_mapped2genome(in_sorted_dmr_file,record_out_files,dmr_min_cutoff)
+  else:
+      #optional one use <= min_cutoff for selecting DMRs
+      total, dict_chr=count_dmrs_not_mapped2genome(in_sorted_dmr_file,record_out_files,dmr_min_cutoff,is_greater)
   return total, dict_chr
  
 def run(args):
@@ -93,21 +100,28 @@ def run(args):
   region_files=region_files.loc[:,0].to_list()
   methylation_file=in_sorted_dmr_file
 
-  #jbw here file name has to change the parameters no long shown in the file name in new version
-  #tmp_str=os.path.basename(in_sorted_dmr_file )
-  #tmp_str=tmp_str.split('_')
-  #tmp_str=tmp_str[-1]
-  #tmp_str=tmp_str.replace('.bed','')
-  parameter_file=in_sorted_dmr_file.replace('.bed','_parameter.bed')
-  print(parameter_file)
-  parameter_df=pd.read_csv(parameter_file,sep='\t',header=None)
-  tmp_str=parameter_df[0].to_list()[-1]
-  print(tmp_str)
-  tmp_str=tmp_str.split('_')[-1]
-  dmr_min_cutoff=float(tmp_str)
-  main(region_files, methylation_file, reference_file, in_sorted_dmr_file, dmr_min_cutoff,out_folder,min_overlap)
+  if args.dmr_min_cutoff ==0 :
+    #jbw here file name has to change the parameters no long shown in the file name in new version
+    #tmp_str=os.path.basename(in_sorted_dmr_file )
+    #tmp_str=tmp_str.split('_')
+    #tmp_str=tmp_str[-1]
+    #tmp_str=tmp_str.replace('.bed','')
+    #use default cutoff value from accompanied parameter file from dmr_analysis
+    # >= cutoff value
+    parameter_file=in_sorted_dmr_file.replace('.bed','_parameter.bed')
+    print(parameter_file)
+    parameter_df=pd.read_csv(parameter_file,sep='\t',header=None)
+    tmp_str=parameter_df[0].to_list()[-1]
+    print(tmp_str)
+    tmp_str=tmp_str.split('_')[-1]
+    dmr_min_cutoff=float(tmp_str)
+    main(region_files, methylation_file, reference_file, in_sorted_dmr_file, dmr_min_cutoff,out_folder,min_overlap)
+  else:
+    #use <= cutoff value for selecting DMRs
+    dmr_min_cutoff=args.dmr_min_cutoff
+    is_greater=False
+    main(region_files, methylation_file, reference_file, in_sorted_dmr_file, dmr_min_cutoff,out_folder,min_overlap,is_greater)
 
-  
 if __name__ == '__main__':
   args=my_parser(argparse.ArgumentParser('python dmr_map2genome.py ')).parse_args()
   run(args)
