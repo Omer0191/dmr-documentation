@@ -70,7 +70,7 @@ echo dmr_combine_multChrs4rank - Done
 chrom='chr18'
 #-- please note the name of in_DMR_file may be changed in different run because of the parameters, the total number of input and the top percentage et al
   #in_DMR_file=${chrom}'_maxDist_1000_minSize_5_DMR_clusterAccuracy_gt_0.5_miniMethyChange_gt_0.05_0.1_0.2_high_miniPercentChange_gt_0.0001_Pcutoff_0.05_isSmooth_2_isModTest_0_1285_range_dmrRanking_top_0.78_minLogReg_proba_0.7'
-in_DMR_file=${chrom}'_all_mr_data_range_dmrRanking.tsv'_
+in_DMR_file=${chrom}'_all_mr_data_range_dmrRanking.tsv'
 in_data_file=${chrom}'_MR_data4maxBlockDistance_1000_minBlockSize_5_data.txt.gz'
 in_wildType_string='gcb'
 
@@ -85,13 +85,17 @@ dmr_analysis dmr_selected4plot --in_DMR_file ${in_DMR_file} \
 	--needs_check_mr mr5,mr6,mr8 --wildType_fileString ${in_wildType_string} \
 	--out_folder ${out_result_folder}/out_selected4plot
 
+echo "dmr_selected4plot -- Done"
+
 #export selected DMR based on bed format file 0
 ##--input_file contains all MRs in bed foramt that need to extract their raw and smoothed methylation data
 dmr_analysis dmr_exportData  \
                        --input_mr_data_folder ${out_result_folder} \
-                       --output_file_folder $(out_result_folder)/out_exportData \
+                       --output_file_folder ${out_result_folder}/out_exportData \
                        --input_file_format 0 \
                        --wildType_fileString ${in_wildType_string} --column_splitBy_dotOrUnderscore 1 --input_file test_mr.bed
+
+echo "dmr_ExportData -- Done"
 
 
 
@@ -100,16 +104,20 @@ dmr_analysis dmr_exportData  \
 #-- Please note this file name needs to be input manually because it is generated after running "dmr_combine_multChrs4rank" and expored at folder "out_result_folder"
 #mr_IN_FILE='2_chroms_high_miniPercentChange_gt_0.0001_Pcutoff_0.05_isSmooth_2_isModTest_0__range_dmrRanking_top_0.78_minLogReg_proba_0.7'
 
-#a) generate predefined genomic regions (e.g., TSS, TES, gene et al.) by using hmst-seq-analyzer
-#https://hmst-seq.github.io/hmst/
-#Here, to edit exported "list_region_files.txt" for adding/removing predefined genomic regions.
+##a) generate predefined genomic regions (e.g., TSS, TES, gene et al.) by using hmst-seq-analyzer (Not used anymore, Omer 27, April, 23)
+
+
+#a) generate predefined genomic regions (e.g., TSS, TES, gene et al.) by dmr_analysis (Used for gene annotation, Omer 27, April, 23)
+
+#Here, to edit exported "list_region_files.txt" for adding/removing predefined genomic regions
 #For example, to add file path for enhancer reginos in "list_region_files.txt" if user want to include enhancer in the analysis
-hmst_seq_analyzer gene_annotation -F ${out_result_folder} -i no -l 10 \
+
+dmr_analysis dmr_gene_annotation -F ${out_result_folder} -i no -l 10 \
         -xL 50000000 -X 5000 -Y 1000 -M 5000 -N 1000000 -hu yes -n no \
         -r ${in_genome_folder}/${in_genome_refFlat} \
         -g ${in_genome_folder}/${in_genome_size}
 echo export genome annotation files at: ${out_result_folder}/data
-echo gene_annotation-DON
+echo gene_annotation-Done
 
 #b) map DMR to predefined genomic regions such as TSS, TES, gene et al.
 dmr_analysis dmr_map2genome --in_sortedDMR_file ${out_result_folder}/${mr_IN_FILE}.bed \
@@ -117,7 +125,8 @@ dmr_analysis dmr_map2genome --in_sortedDMR_file ${out_result_folder}/${mr_IN_FIL
         --in_outFile_folder ${out_result_folder}/${out_folder4genome_map} \
         --in_refFlat_file ${out_result_folder}/data/${in_sorted_refFlat}
 echo dmr_map2genome - Done
- 
+
+
 #c) calculate percentage of DMR in annotated genomic regions
 dmr_analysis dmr_cal2genome_percent --in_outFile_folder ${out_result_folder}/${out_folder4genome_map} \
         --in_outFile_name ${out_file4genome_map} --in_LogReg_proba ${logProb_cutoff} \

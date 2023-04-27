@@ -1,0 +1,55 @@
+Starting job 8578165 on c6-3 on saga at Fri Apr 14 12:49:38 CEST 2023
+
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+Log file: ../../final_demo_data/hap1_cell/out_data/DMR_CpG_context/chr3/chr3_maxlength_1000_miniSize_5_myapp.log_0
+125408
+['chr3']
+111742
+['chr3']
+112588
+['chr3']
+127455
+['chr3']
+Export  159310  lines of data at chr3_tmp_out_pd.csv
+[    44    100    500   1000   5000  10000  50000 100000 284316]
+slurmstepd: error: *** JOB 8578165 ON c6-3 CANCELLED AT 2023-04-14T13:26:58 ***
+
+Job 8578165 consumed 10.0 billing hours from project nn4605k.
+
+Submitted 2023-04-14T12:49:35; waited 3.0 seconds in the queue after becoming eligible to run.
+
+Requested wallclock time: 3.0 hours
+Elapsed wallclock time:   37.3 minutes
+
+Task and CPU statistics:
+ID             CPUs  Tasks  CPU util                Start   Elapsed  Exit status
+8578165          10            0.0 %  2023-04-14T12:49:38  2240.0 s  0
+8578165.batch    10      1   195.4 %  2023-04-14T12:49:38  2241.0 s  Signal 15
+
+Used CPU time:   12.2 CPU hours
+Unused CPU time: 0.0 CPU seconds
+
+Memory statistics, in GiB:
+ID              Alloc   Usage
+8578165         150.0        
+8578165.batch   150.0     1.6
+
+Job 8578165 completed at Fri Apr 14 13:27:00 CEST 2023

@@ -1,0 +1,349 @@
+Starting job 8578266 on c6-2 on saga at Fri Apr 14 13:47:31 CEST 2023
+
+/cluster/home/junbaiw/nn4605k/junbaiw/miniconda3/envs/dmra_tool/bin/python
+/cluster/home/junbaiw/nn4605k/junbaiw/miniconda3/envs/dmra_tool/bin/dmr_analysis
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1/chr1_maxlength_1000_miniSize_5_myapp.log_0
+12903
+['chr1']
+12083
+['chr1']
+14699
+['chr1']
+12541
+['chr1']
+15020
+['chr1']
+12881
+['chr1']
+15056
+['chr1']
+15213
+['chr1']
+12998
+['chr1']
+15245
+['chr1']
+Export  18809  lines of data at chr1_tmp_out_pd.csv
+[   100    139    500   1000   5000  10000  50000 100000 143899]
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1/chr1_maxlength_1000_miniSize_5_myapp.log_9
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1/chr1_maxlength_1000_miniSize_5_myapp.log_15
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1/chr1_maxlength_1000_miniSize_5_myapp.log_8
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1/chr1_maxlength_1000_miniSize_5_myapp.log_6
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1/chr1_maxlength_1000_miniSize_5_myapp.log_11
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1/chr1_maxlength_1000_miniSize_5_myapp.log_10
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1/chr1_maxlength_1000_miniSize_5_myapp.log_7
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1/chr1_maxlength_1000_miniSize_5_myapp.log_1
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1/chr1_maxlength_1000_miniSize_5_myapp.log_3
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1/chr1_maxlength_1000_miniSize_5_myapp.log_13
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1/chr1_maxlength_1000_miniSize_5_myapp.log_12
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1/chr1_maxlength_1000_miniSize_5_myapp.log_4
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1/chr1_maxlength_1000_miniSize_5_myapp.log_2
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1/chr1_maxlength_1000_miniSize_5_myapp.log_14
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1/chr1_maxlength_1000_miniSize_5_myapp.log_5
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr2/chr2_maxlength_1000_miniSize_5_myapp.log_0
+10771
+['chr2']
+11027
+['chr2']
+12412
+['chr2']
+10464
+['chr2']
+12580
+['chr2']
+10908
+['chr2']
+11020
+['chr2']
+12954
+['chr2']
+12711
+['chr2']
+12561
+['chr2']
+Export  15328  lines of data at chr2_tmp_out_pd.csv
+[  100   265   500  1000  5000 10000 50000 85526]
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr2/chr2_maxlength_1000_miniSize_5_myapp.log_1
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr2/chr2_maxlength_1000_miniSize_5_myapp.log_15
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr2/chr2_maxlength_1000_miniSize_5_myapp.log_6
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr2/chr2_maxlength_1000_miniSize_5_myapp.log_14
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr2/chr2_maxlength_1000_miniSize_5_myapp.log_3
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr2/chr2_maxlength_1000_miniSize_5_myapp.log_11
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr2/chr2_maxlength_1000_miniSize_5_myapp.log_12
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr2/chr2_maxlength_1000_miniSize_5_myapp.log_2
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr2/chr2_maxlength_1000_miniSize_5_myapp.log_5
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr2/chr2_maxlength_1000_miniSize_5_myapp.log_13
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr2/chr2_maxlength_1000_miniSize_5_myapp.log_7
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr2/chr2_maxlength_1000_miniSize_5_myapp.log_9
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr2/chr2_maxlength_1000_miniSize_5_myapp.log_8
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr2/chr2_maxlength_1000_miniSize_5_myapp.log_10
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr2/chr2_maxlength_1000_miniSize_5_myapp.log_4
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr3/chr3_maxlength_1000_miniSize_5_myapp.log_0
+11985
+['chr3']
+12276
+['chr3']
+13869
+['chr3']
+13911
+['chr3']
+11525
+['chr3']
+12199
+['chr3']
+12294
+['chr3']
+13963
+['chr3']
+14330
+['chr3']
+14016
+['chr3']
+Export  17256  lines of data at chr3_tmp_out_pd.csv
+[   100    216    500   1000   5000  10000  50000 100000 167477]
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr3/chr3_maxlength_1000_miniSize_5_myapp.log_15
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr3/chr3_maxlength_1000_miniSize_5_myapp.log_2
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr3/chr3_maxlength_1000_miniSize_5_myapp.log_10
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr3/chr3_maxlength_1000_miniSize_5_myapp.log_8
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr3/chr3_maxlength_1000_miniSize_5_myapp.log_14
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr3/chr3_maxlength_1000_miniSize_5_myapp.log_1
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr3/chr3_maxlength_1000_miniSize_5_myapp.log_3
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr3/chr3_maxlength_1000_miniSize_5_myapp.log_6
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr3/chr3_maxlength_1000_miniSize_5_myapp.log_12
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr3/chr3_maxlength_1000_miniSize_5_myapp.log_9
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr3/chr3_maxlength_1000_miniSize_5_myapp.log_13
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr3/chr3_maxlength_1000_miniSize_5_myapp.log_5
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr3/chr3_maxlength_1000_miniSize_5_myapp.log_11
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr3/chr3_maxlength_1000_miniSize_5_myapp.log_4
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr3/chr3_maxlength_1000_miniSize_5_myapp.log_7
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chrX/chrX_maxlength_1000_miniSize_5_myapp.log_0
+9914
+['chrX']
+14358
+['chrX']
+15229
+['chrX']
+11012
+['chrX']
+11204
+['chrX']
+11269
+['chrX']
+15618
+['chrX']
+17145
+['chrX']
+14928
+['chrX']
+11089
+['chrX']
+Export  33177  lines of data at chrX_tmp_out_pd.csv
+[   26   100   500  1000  5000 10000 50000 73003]
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chrX/chrX_maxlength_1000_miniSize_5_myapp.log_15
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chrX/chrX_maxlength_1000_miniSize_5_myapp.log_6
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chrX/chrX_maxlength_1000_miniSize_5_myapp.log_10
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chrX/chrX_maxlength_1000_miniSize_5_myapp.log_3
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chrX/chrX_maxlength_1000_miniSize_5_myapp.log_13
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chrX/chrX_maxlength_1000_miniSize_5_myapp.log_11
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chrX/chrX_maxlength_1000_miniSize_5_myapp.log_9
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chrX/chrX_maxlength_1000_miniSize_5_myapp.log_2
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chrX/chrX_maxlength_1000_miniSize_5_myapp.log_8
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chrX/chrX_maxlength_1000_miniSize_5_myapp.log_12
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chrX/chrX_maxlength_1000_miniSize_5_myapp.log_4
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chrX/chrX_maxlength_1000_miniSize_5_myapp.log_7
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chrX/chrX_maxlength_1000_miniSize_5_myapp.log_14
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chrX/chrX_maxlength_1000_miniSize_5_myapp.log_5
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chrY/chrY_maxlength_1000_miniSize_5_myapp.log_0
+10676
+['chrY']
+11111
+['chrY']
+11307
+['chrY']
+14378
+['chrY']
+14550
+['chrY']
+10931
+['chrY']
+16153
+['chrY']
+9447
+['chrY']
+13621
+['chrY']
+14813
+['chrY']
+Export  30935  lines of data at chrY_tmp_out_pd.csv
+[    58    100    500   1000   5000  10000  50000 100000 104092]
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chrY/chrY_maxlength_1000_miniSize_5_myapp.log_15
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chrY/chrY_maxlength_1000_miniSize_5_myapp.log_11
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chrY/chrY_maxlength_1000_miniSize_5_myapp.log_2
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chrY/chrY_maxlength_1000_miniSize_5_myapp.log_4
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chrY/chrY_maxlength_1000_miniSize_5_myapp.log_14
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chrY/chrY_maxlength_1000_miniSize_5_myapp.log_12
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chrY/chrY_maxlength_1000_miniSize_5_myapp.log_6
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chrY/chrY_maxlength_1000_miniSize_5_myapp.log_10
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chrY/chrY_maxlength_1000_miniSize_5_myapp.log_1
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chrY/chrY_maxlength_1000_miniSize_5_myapp.log_9
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chrY/chrY_maxlength_1000_miniSize_5_myapp.log_5
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chrY/chrY_maxlength_1000_miniSize_5_myapp.log_3
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chrY/chrY_maxlength_1000_miniSize_5_myapp.log_13
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chrY/chrY_maxlength_1000_miniSize_5_myapp.log_7
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chrY/chrY_maxlength_1000_miniSize_5_myapp.log_8
+dmr_analysis_block - Done
+input Chromosomes:  ('chr1', 'chr2', 'chr3', 'chrX', 'chrY')
+input File folders:  ../../final_demo_data/rat_data/out_data/DMR_CpG_context plots
+search File strings:  *_all_mr_data_range.tsv
+5 chromes 5 *_all_mr_data_range.tsv files find in ../../final_demo_data/rat_data/out_data/DMR_CpG_context
+DMR class 
+[0 1]
+beta coefficient for DMR features :
+ gcb_vs_grpsDist, tumor_vs_grpsDist, %_passed_ttest, cluster_accuracy, high_(t-g)%, median_(t-g)%
+[[ 4.21699505  2.2372747   4.79981407 -1.08988437  1.63227791  4.68114345]]
+interceptic of Logistic Regression model 
+[-5.59267674]
+Prediction accuracy:
+0.8620689655172413
+Confusion matrix:
+[[378  53]
+ [ 43 222]]
+Cluster accuracy range : 0.0 1.1
+D
+logReg_proba_0.6
+Number of selected DMR,  Recovered number of DMR,  Total number of DMR,  Percentage of recovered DMR
+(202,) (202,) (265,) 0.7622641509433963
+(202, 27)
+Selected mini-logReg-score and logReg probability
+0.41872361552312753 [0.41872361552312753, 0.6031777819638215]
+0.7622641509433963
+(29, 27)
+Export data: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1/plots/chr1_all_mr_data_range_dmrRanking.tsv
+Export parameter: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1/plots/chr1_all_mr_data_range_dmrRanking_parameters.tsv
+(44, 27)
+Export data: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr2/plots/chr2_all_mr_data_range_dmrRanking.tsv
+Export parameter: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr2/plots/chr2_all_mr_data_range_dmrRanking_parameters.tsv
+(44, 27)
+Export data: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr3/plots/chr3_all_mr_data_range_dmrRanking.tsv
+Export parameter: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr3/plots/chr3_all_mr_data_range_dmrRanking_parameters.tsv
+(337, 27)
+Export data: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chrX/plots/chrX_all_mr_data_range_dmrRanking.tsv
+Export parameter: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chrX/plots/chrX_all_mr_data_range_dmrRanking_parameters.tsv
+(242, 27)
+Export data: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chrY/plots/chrY_all_mr_data_range_dmrRanking.tsv
+Export parameter: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/chrY/plots/chrY_all_mr_data_range_dmrRanking_parameters.tsv
+Export selected column data of combined chromosomes at : ../../final_demo_data/rat_data/out_data/DMR_CpG_context/5_chroms_all_mr_data_range_dmrRanking.bed
+Export parameters of combined chromosomes at : ../../final_demo_data/rat_data/out_data/DMR_CpG_context/5_chroms_all_mr_data_range_dmrRanking_parameter.bed
+(696, 5)
+dmr_combine_multChrs4rank - Done
+../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr3/plots/chr3_all_mr_data_range_dmrRanking.tsv
+../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr3/chr3_MR_data4maxBlockDistance_1000_minBlockSize_5_data.txt.gz
+../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr3/plots/chr3_1_mr_parameters.tsv
+chr3_maxDist_1000_minSize_5_DMR_clusterAccuracy_gt_0.5_miniMethyChange_gt_0.05_0.1_0.2_high_miniPercentChange_gt_0.0001_Pcutoff_0.05_isSmooth_2_isModTest_0_44_1
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/out_selected4plot/chr3/chr3_maxlength_1000_miniSize_5_myapp.log_0
+Create:  ../../final_demo_data/rat_data/out_data/DMR_CpG_context/out_selected4plot/chr3/data
+1
+2
+3
+plot selected MR - Done
+../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1/plots/chr1_all_mr_data.tsv
+../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1/chr1_MR_data4maxBlockDistance_1000_minBlockSize_5_data.txt.gz
+../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1/plots/chr1_1_mr_parameters.tsv
+chr1_maxDist_1000_minSize_5_DMR_clusterAccuracy_gt_0.5_miniMethyChange_gt_0.05_0.1_0.2_high_miniPercentChange_gt_0.0001_Pcutoff_0.05_isSmooth_2_isModTest_0_29_1
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/out_exportData/chr1/chr1_maxlength_1000_miniSize_5_myapp.log_0
+1
+2
+../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1/plots/chr1_all_mr_data.tsv
+../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1/chr1_MR_data4maxBlockDistance_1000_minBlockSize_5_data.txt.gz
+../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1/plots/chr1_1_mr_parameters.tsv
+chr1_maxDist_1000_minSize_5_DMR_clusterAccuracy_gt_0.5_miniMethyChange_gt_0.05_0.1_0.2_high_miniPercentChange_gt_0.0001_Pcutoff_0.05_isSmooth_2_isModTest_0_29_1
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/out_exportData/chr1/chr1_maxlength_1000_miniSize_5_myapp.log_0
+Create:  ../../final_demo_data/rat_data/out_data/DMR_CpG_context/out_exportData/chr1/data
+1
+2
+../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1/plots/chr1_all_mr_data.tsv
+../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1/chr1_MR_data4maxBlockDistance_1000_minBlockSize_5_data.txt.gz
+../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1/plots/chr1_1_mr_parameters.tsv
+chr1_maxDist_1000_minSize_5_DMR_clusterAccuracy_gt_0.5_miniMethyChange_gt_0.05_0.1_0.2_high_miniPercentChange_gt_0.0001_Pcutoff_0.05_isSmooth_2_isModTest_0_29_1
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/out_exportData/chr1/chr1_maxlength_1000_miniSize_5_myapp.log_0
+1
+2
+../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1/plots/chr1_all_mr_data.tsv
+../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1/chr1_MR_data4maxBlockDistance_1000_minBlockSize_5_data.txt.gz
+../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1/plots/chr1_1_mr_parameters.tsv
+chr1_maxDist_1000_minSize_5_DMR_clusterAccuracy_gt_0.5_miniMethyChange_gt_0.05_0.1_0.2_high_miniPercentChange_gt_0.0001_Pcutoff_0.05_isSmooth_2_isModTest_0_29_1
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/out_exportData/chr1/chr1_maxlength_1000_miniSize_5_myapp.log_0
+1
+2
+../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1/plots/chr1_all_mr_data.tsv
+../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1/chr1_MR_data4maxBlockDistance_1000_minBlockSize_5_data.txt.gz
+../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1/plots/chr1_1_mr_parameters.tsv
+chr1_maxDist_1000_minSize_5_DMR_clusterAccuracy_gt_0.5_miniMethyChange_gt_0.05_0.1_0.2_high_miniPercentChange_gt_0.0001_Pcutoff_0.05_isSmooth_2_isModTest_0_29_1
+Log file: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/out_exportData/chr1/chr1_maxlength_1000_miniSize_5_myapp.log_0
+1
+2
+Input file in bed format:  chr; start; end; chr:mrID:chrStart,..,chrEnd:mrType:D/U; p-value 
+10 chr1
+../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1
+../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1
+../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1
+../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1
+../../final_demo_data/rat_data/out_data/DMR_CpG_context/chr1
+Running  5  jobs in  5  parallel processes!
+export selected MR - Done
+./run_rat_part1_test.sh: line 103: hmst_seq_analyzer: command not found
+export genome annotation files at: ../../final_demo_data/rat_data/out_data/DMR_CpG_context/data
+gene_annotation-Done
+Create result folder,  ../../final_demo_data/rat_data/out_data/DMR_CpG_context/out_map2genome
+Traceback (most recent call last):
+  File "/cluster/home/junbaiw/nn4605k/junbaiw/miniconda3/envs/dmra_tool/bin/dmr_analysis", line 33, in <module>
+    sys.exit(load_entry_point('dmr-analysis==0.0.0', 'console_scripts', 'dmr_analysis')())
+  File "/cluster/home/junbaiw/nn4605k/junbaiw/miniconda3/envs/dmra_tool/lib/python3.9/site-packages/dmr_analysis/dmr_analysis.py", line 102, in main
+    Main()
+  File "/cluster/home/junbaiw/nn4605k/junbaiw/miniconda3/envs/dmra_tool/lib/python3.9/site-packages/dmr_analysis/dmr_analysis.py", line 32, in __init__
+    getattr(self,args.task)()
+  File "/cluster/home/junbaiw/nn4605k/junbaiw/miniconda3/envs/dmra_tool/lib/python3.9/site-packages/dmr_analysis/dmr_analysis.py", line 56, in dmr_map2genome
+    run(parser.parse_args(sys.argv[2:]))
+  File "/cluster/home/junbaiw/nn4605k/junbaiw/miniconda3/envs/dmra_tool/lib/python3.9/site-packages/dmr_analysis/script/dmr_map2genome.py", line 99, in run
+    region_files=pd.read_csv(in_region_files,header=None)
+  File "/cluster/home/junbaiw/nn4605k/junbaiw/miniconda3/envs/dmra_tool/lib/python3.9/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/cluster/home/junbaiw/nn4605k/junbaiw/miniconda3/envs/dmra_tool/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 678, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/cluster/home/junbaiw/nn4605k/junbaiw/miniconda3/envs/dmra_tool/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 575, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/cluster/home/junbaiw/nn4605k/junbaiw/miniconda3/envs/dmra_tool/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 932, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/cluster/home/junbaiw/nn4605k/junbaiw/miniconda3/envs/dmra_tool/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1216, in _make_engine
+    self.handles = get_handle(  # type: ignore[call-overload]
+  File "/cluster/home/junbaiw/nn4605k/junbaiw/miniconda3/envs/dmra_tool/lib/python3.9/site-packages/pandas/io/common.py", line 786, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: '../../final_demo_data/rat_data/out_data/DMR_CpG_context/list_region_files.txt'
+dmr_map2genome - Done
+../../final_demo_data/rat_data/out_data/DMR_CpG_context/out_map2genome/*_chroms_all_mr_data_range_dmrRanking_*.bed
+Export at:  ../../final_demo_data/rat_data/out_data/DMR_CpG_context/out_map2genome/control_vs_test_DMR_hyper_hypo_mix_0.7.csv
+dmr_cal2genome_percent - Done
+../../final_demo_data/rat_data/out_data/DMR_CpG_context/out_map2genome/control_vs_test_DMR_hyper_hypo_mix_0.7.pdf
+dmr_percent2plot - Done
+
+Job 8578266 consumed 2.2 billing hours from project nn4605k.
+
+Submitted 2023-04-14T13:47:15; waited 16.0 seconds in the queue after becoming eligible to run.
+
+Requested wallclock time: 3.0 hours
+Elapsed wallclock time:   8.1 minutes
+
+Task and CPU statistics:
+ID             CPUs  Tasks  CPU util                Start  Elapsed  Exit status
+8578266          10            0.0 %  2023-04-14T13:47:31  486.0 s  0
+8578266.batch    10      1   152.9 %  2023-04-14T13:47:31  486.0 s  0
+
+Used CPU time:   2.1 CPU hours
+Unused CPU time: 0.0 CPU seconds
+
+Memory statistics, in GiB:
+ID              Alloc   Usage
+8578266         150.0        
+8578266.batch   150.0     1.3
+
+Job 8578266 completed at Fri Apr 14 13:55:37 CEST 2023
