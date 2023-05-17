@@ -70,4 +70,16 @@
     <ul>
       <li><code>-in IN_FILE_FOLDER, --in_file_folder IN_FILE_FOLDER</code>: input file folder for DNA methylation data such as WGBS. In this folder, all samples are provided in each chromosome folder with BED format where sample name is indicated by file name.</li>
       <li><code>-chr CHROMOSOME, --chromosome CHROMOSOME</code>: select a chromosome for running dmr_analysis_block. For example, a chromosome (e.g., chrY) file folder under --in_file_folder that contains methylation data of samples in a chromosome (e.g., chrY)</li>
-      <li><code>-gkey GROUP_KEY, --group_key GROUP_KEY</
+      <li><code>-gkey GROUP_KEY, --group_key GROUP_KEY</code>: group key name, all bed files name contain this group_key will be combined together for dmr_analysis_block. In other words, only bed file name with this group_key will be selected in analysis. Usually, it is the same as the file folder (or chromosome name) in --chromosome.</li>
+    </ul>
+
+    <h3>Optional Parameters</h3>
+    <ul>
+      <li><strong>-out, --out_file_folder</strong>: output file folder that stores all results computed by dmr_analysis_block, default is out/</li>
+      <li><strong>-ncol, --need_column</strong>: select a column name from bed file that will be used by dmr_analysis_block. For example, there are only six columns allowed in a bed file and the column labels will be added automatically such as (Chrs, Starts, Ends, Methylation, Total_counts, Strand) after loading the data. Here, if we assume the fourth column of the input bed file is the methylation level, then --need_column = Methylation, default = Methylation</li>
+      <li><strong>-wtStr, --wildType_fileString</strong>: Use the first few character string of a file name to indicate it is a normal/wild type sample or to label this file/sample as wild type/normal condition. For example, if a file name under a chromosome folder of --in_file_folder starts with gcb_meht1_* is a wild type/control/normal sample, then --wildType_fileString is gcb. Default is gcb in the program</li>
+      <!-- ... continue with the rest of the optional parameters ... -->
+    </ul>
+  </main>
+</body>
+</html>
