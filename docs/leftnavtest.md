@@ -58,26 +58,22 @@
   </nav>
   <main>
     <h1>Differential Methylated Region Analysis Tool</h1>
-    <h2>dmr_analysis Documentation</h2>
-    <p>dmr_analysis is a software tool for differentially Methylated Regions analysis to rank significant DMRs.</p>
-
-    <h3>DMR Block Analysis</h3>
-    <p>Significant test of TF binding affinity changes between the foreground and the background calculations</p>
+    <h2>check_accuracy4cluster Documentation</h2>
+    <p>check_accuracy4cluster is a significant test of TF binding affinity changes between the foreground and the background calculations.</p>
 
     <h3>Required Parameters</h3>
-    <p>Required:</p>
     <ul>
-      <li><code>-in IN_FILE_FOLDER, --in_file_folder IN_FILE_FOLDER</code>: input file folder for DNA methylation data such as WGBS. In this folder, all samples are provided in each chromosome folder with BED format where sample name is indicated by file name.</li>
-      <li><code>-chr CHROMOSOME, --chromosome CHROMOSOME</code>: select a chromosome for running dmr_analysis_block. For example, a chromosome (e.g., chrY) file folder under --in_file_folder that contains methylation data of samples in a chromosome (e.g., chrY)</li>
-      <li><code>-gkey GROUP_KEY, --group_key GROUP_KEY</code>: group key name, all bed files name contain this group_key will be combined together for dmr_analysis_block. In other words, only bed file name with this group_key will be selected in analysis. Usually, it is the same as the file folder (or chromosome name) in --chromosome.</li>
+      <li><code>background_folder</code>: Folder containing the computed background model produced by background_affinity_changes.py</li>
+      <li><code>foreground_folder</code>: Folder containing the computed delta-dba values for patient data produced by bayespi_bar.py</li>
     </ul>
 
     <h3>Optional Parameters</h3>
     <ul>
-      <li><code>-out, --out_file_folder</code>: output file folder that stores all results computed by dmr_analysis_block, default is out/</li>
-      <li><code>-ncol, --need_column</code>: select a column name from bed file that will be used by dmr_analysis_block. For example, there are only six columns allowed in a bed file and the column labels will be added automatically such as (Chrs, Starts, Ends, Methylation, Total_counts, Strand) after loading the data. Here, if we assume the fourth column of the input bed file is the methylation level, then --need_column = Methylation, default = Methylation</li>
-      <!-- ... continue with the rest of the optional parameters ... -->
+      <li><code>output_file</code>: Output file name, default is -</li>
+      <li><code>p_value</code>: P-value cutoff for the Wilcoxon test, default=0.05</li>
+      <li><code>max_rank</code>: Maximum rank of PWM to consider in the patient results, default=15</li>
+      <li><code>exact_test</code>: Use exact Wilcoxon rank-sum test from R. R needs to be installed, default is False</li>
     </ul>
   </main>
 </body>
-</html>
+</
