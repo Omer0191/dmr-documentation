@@ -9,10 +9,10 @@
     </ul>
   </div>
   <div class="content">
-  
-  ## Home <a name="home"></a>
-
-  <p>Plot figure or export methylation data for selected DMR/MRs
+    <section id="home">
+      <h2>Home</h2>
+      <p>Welcome to my website! This is the home page.</p>
+      <p>Plot figure or export methylation data for selected DMR/MRs
 </p>
 
 <ul>
@@ -41,11 +41,12 @@
   <li><strong>-wtStr, --wildType_fileString</strong> - A file name of the wild type condition file which shall start with these characters. For example, if a file name starts with "gcb_meht1_*" is a wild type/control sample, then --wildType_fileString is gcb, which is the default setting in the program</li>
 </ul>
 
-  ---
-
-  ## About <a name="about"></a>
-
-  <p>Plot figure or export methylation data for selected DMR/MRs
+    </section>
+    
+    <section id="about">
+      <h2>About</h2>
+      <p>This is the about page. Here you can learn more about me and my work.</p>
+      <p>Plot figure or export methylation data for selected DMR/MRs
 </p>
 
 <ul>
@@ -74,12 +75,7 @@
   <li><strong>-wtStr, --wildType_fileString</strong> - A file name of the wild type condition file which shall start with these characters. For example, if a file name starts with "gcb_meht1_*" is a wild type/control sample, then --wildType_fileString is gcb, which is the default setting in the program</li>
 </ul>
 
-  
-  ---
-  
-  ## Contact <a name="contact"></a>
-
- <p>Plot figure or export methylation data for selected DMR/MRs
+      <p>Plot figure or export methylation data for selected DMR/MRs
 </p>
 
 <ul>
@@ -108,6 +104,16 @@
   <li><strong>-wtStr, --wildType_fileString</strong> - A file name of the wild type condition file which shall start with these characters. For example, if a file name starts with "gcb_meht1_*" is a wild type/control sample, then --wildType_fileString is gcb, which is the default setting in the program</li>
 </ul>
 
+    </section>
+    
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>To get in touch with me, please use the contact information below:</p>
+      <ul>
+        <li>Email: example@example.com</li>
+        <li>Phone: 123-456-7890</li>
+      </ul>
+    </section>
   </div>
 </div>
 
@@ -119,6 +125,9 @@
 .menu {
   width: 200px;
   background-color: #f2f2f2;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
 }
 
 .menu ul {
@@ -131,7 +140,7 @@
 }
 
 .content {
-  flex-grow: 1;
+  margin-left: 200px;
   padding: 20px;
 }
 </style>
