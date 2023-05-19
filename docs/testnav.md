@@ -1,54 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>GitHub Markdown Navigation</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
+# Table of Contents
 
-        #container {
-            display: flex;
-        }
+- [Section 1](#section-1)
+- [Section 2](#section-2)
+- [Section 3](#section-3)
 
-        #sidebar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 200px;
-            height: 100vh;
-            background-color: #f1f1f1;
-            padding: 20px;
-            box-sizing: border-box;
-        }
+---
 
-        #content {
-            margin-left: 220px;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-    </style>
-</head>
-<body>
-    <div id="container">
-        <div id="sidebar">
-            <ul>
-                <li><a href="#section1">Section 1</a></li>
-                <li><a href="#section2">Section 2</a></li>
-                <li><a href="#section3">Section 3</a></li>
-            </ul>
-        </div>
-        <div id="content">
-            <h1 id="section1">Section 1</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            
-            <h1 id="section2">Section 2</h1>
-            <p>Donec nec odio vitae odio varius placerat. Ut non quam vitae nunc cursus viverra a at arcu.</p>
-            
-            <h1 id="section3">Section 3</h1>
-            <p>Sed dapibus urna sit amet leo tristique, ut gravida turpis lacinia.</p>
-        </div>
-    </div>
-</body>
-</html>
+## Section 1
+
+Content for Section 1 goes here.
+
+---
+
+## Section 2
+
+Content for Section 2 goes here.
+
+---
+
+## Section 3
+
+Content for Section 3 goes here.
