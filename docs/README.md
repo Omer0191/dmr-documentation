@@ -66,5 +66,5 @@ optional arguments:
 
           
 Having trouble with package? Contact us @ junbai.wang@medisin.uio.no and we will be glad to help you.
-You can read the complete documentation here: [https://dds-analysis.readthedocs.io/en/latest/index.html ](https://dmr-analysis.readthedocs.io/en/latest/index.html#)
+You can read the complete documentation here: [ https://dmr-analysis.readthedocs.io/en/latest/index.html ](https://dmr-analysis.readthedocs.io/en/latest/index.html#)
 
